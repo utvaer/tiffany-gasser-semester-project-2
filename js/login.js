@@ -1,4 +1,5 @@
 import { baseUrl } from "./settings/api.js";
+import { saveToken, saveUser } from "./utils/storage.js";
 
 const message = document.querySelector(".message-container");
 const form = document.querySelector("form");
@@ -17,22 +18,48 @@ function submitForm(event) {
   const passwordValue = password.value.trim();
 
   if (
-    usernameValue.length > 3 ||
+    usernameValue.length === 0 ||
     emailValue.length === 0 ||
     passwordValue === 0
   ) {
-    console.log("error, give me something");
+    message.innerHTML = "we need something you know";
   }
 
   completeLogin(usernameValue, emailValue, passwordValue);
 }
 
-function completeLogin(username, email, password) {
+async function completeLogin(username, email, password) {
   const url = baseUrl + "auth/local";
+  const data = JSON.stringify({ identifier: username, password: password });
+  const options = {
+    method: "POST",
+    body: data,
+    headers: {
+      "Content-Type": "application/json",
+    },
+  };
+
+  try {
+    const response = await fetch(url, options);
+    const json = await response.json();
+    console.log(json);
+
+    if (json.user) {
+      saveToken(json.jwt);
+      saveUser(json.user);
+
+      location.href = "/products.html";
+    }
+    if (json.error) {
+      message.innerHTML = "incorrect log in details";
+    }
+  } catch (error) {
+    console.log(error);
+  }
 }
 
-function validateEmail(email) {
+/*function validateEmail(email) {
   const regEx = /\S+@\S+\.\S+/;
   const patternMatches = regEx.test(email);
   return patternMatches;
-}
+}*/

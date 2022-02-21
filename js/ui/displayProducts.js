@@ -10,6 +10,7 @@ export function displayProducts(json) {
                                 <h6 class="card-subtitle mb-2 text-muted">USD ${product.price}</h6>
                                 <p class="card-text">Brand ${product.brand}</p>
                               </div>
+                              <button>Add to Bag</button>
                             </a>
                           </div>`;
   });
