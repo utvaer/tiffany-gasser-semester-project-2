@@ -9,23 +9,60 @@
       href="https://cdn.jsdelivr.net/npm/remixicon@2.5.0/fonts/remixicon.css"
     />
     <link rel="stylesheet" href="css/styles.css" />
+    <!--flavicon-->
+    <link
+      rel="apple-touch-icon"
+      sizes="180x180"
+      href="favicon_io/apple-touch-icon.png"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="favicon_io/favicon-32x32.png"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="16x16"
+      href="favicon_io/favicon-16x16.png"
+    />
+    <link rel="manifest" href="/site.webmanifest" />
     <title>Document</title>
   </head>
   <body>
     <header></header>
 
     <main>
-      <nav style="--bs-breadcrumb-divider: '>'" aria-label="breadcrumb">
-        <ol class="breadcrumb">
-          <li class="breadcrumb-item">
-            <a href="products.html">All sneakers</a>
-          </li>
-          <li class="breadcrumb-item active" aria-current="page">Library</li>
-        </ol>
-      </nav>
-      <div class="product-info"></div>
+      <div class="container">
+        <!--Breadcrumb-->
+        <nav style="--bs-breadcrumb-divider: '>'" aria-label="breadcrumb">
+          <ol class="breadcrumb">
+            <li class="breadcrumb-item">
+              <a href="products.html">All sneakers</a>
+            </li>
+            <li class="breadcrumb-item active page" aria-current="page"></li>
+          </ol>
+        </nav>
+        <!--end of breadcrumb-->
+
+        <!--Product info display-->
+        <div class="product-detail">
+          <!--spinner -->
+          <div class="loader">
+            <div class="d-flex justify-content-center">
+              <div class="spinner-grow" role="status">
+                <span class="visually-hidden">Loading...</span>
+              </div>
+            </div>
+          </div>
+          <!--end of spinner-->
+        </div>
+        <!--end of product info display-->
+      </div>
     </main>
 
     <footer></footer>
+    <script src="js/productdetail.js" type="module"></script>
   </body>
 </html>

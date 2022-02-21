@@ -1,6 +1,6 @@
 import { baseUrl } from "./settings/api.js";
 import { displayProducts } from "./ui/displayProducts.js";
-
+const products = document.querySelector(".row");
 const productsUrl = baseUrl + "products";
 
 (async function apiCall() {
@@ -8,7 +8,7 @@ const productsUrl = baseUrl + "products";
     const response = await fetch(productsUrl);
     const json = await response.json();
 
-    console.log(json);
+    products.innerHTML = "";
     displayProducts(json);
   } catch (error) {
     console.log(error);

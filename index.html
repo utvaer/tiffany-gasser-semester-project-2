@@ -9,6 +9,7 @@
       href="https://cdn.jsdelivr.net/npm/remixicon@2.5.0/fonts/remixicon.css"
     />
     <link rel="stylesheet" href="css/styles.css" />
+    <!--flavicon-->
     <link
       rel="apple-touch-icon"
       sizes="180x180"
@@ -29,8 +30,10 @@
     <link rel="manifest" href="/site.webmanifest" />
     <title>Urban Feet | Home</title>
   </head>
+
   <body>
     <header>
+      <!--Top nav-->
       <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
         <div class="container-fluid">
           <a class="navbar-brand" href="index.html">Urban Feet</a>
@@ -78,6 +81,8 @@
         </form>
       </div>
 
+      <!--Home banner-->
+
       <div class="container-fluid bg-light p-5">
         <h1 class="display-4">Sneakers for all feet</h1>
         <a class="btn btn-primary btn-lg" href="products.html" role="button"
@@ -87,83 +92,92 @@
     </header>
 
     <main>
-      <h2>Popular lately</h2>
+      <div class="container">
+        <h2>Popular lately</h2>
 
-      <div
-        id="carouselExampleIndicators"
-        class="carousel slide"
-        data-bs-ride="carousel"
-      >
-        <div class="carousel-indicators">
-          <button
-            type="button"
-            data-bs-target="#carouselExampleIndicators"
-            data-bs-slide-to="0"
-            class="active"
-            aria-current="true"
-            aria-label="Slide 1"
-          ></button>
-          <button
-            type="button"
-            data-bs-target="#carouselExampleIndicators"
-            data-bs-slide-to="1"
-            aria-label="Slide 2"
-          ></button>
-          <button
-            type="button"
-            data-bs-target="#carouselExampleIndicators"
-            data-bs-slide-to="2"
-            aria-label="Slide 3"
-          ></button>
-        </div>
-        <div class="carousel-inner">
-          <div class="carousel-item active">
-            <img src="..." class="d-block w-100" alt="..." />
-          </div>
-          <div class="carousel-item">
-            <img src="..." class="d-block w-100" alt="..." />
-          </div>
-          <div class="carousel-item">
-            <img src="..." class="d-block w-100" alt="..." />
-          </div>
-        </div>
-        <button
-          class="carousel-control-prev"
-          type="button"
-          data-bs-target="#carouselExampleIndicators"
-          data-bs-slide="prev"
+        <!--Carousel display-->
+
+        <div
+          id="carouselExampleIndicators"
+          class="carousel slide"
+          data-bs-ride="carousel"
         >
-          <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-          <span class="visually-hidden">Previous</span>
-        </button>
-        <button
-          class="carousel-control-next"
-          type="button"
-          data-bs-target="#carouselExampleIndicators"
-          data-bs-slide="next"
-        >
-          <span class="carousel-control-next-icon" aria-hidden="true"></span>
-          <span class="visually-hidden">Next</span>
-        </button>
-      </div>
+          <div class="carousel-indicators">
+            <button
+              type="button"
+              data-bs-target="#carouselExampleIndicators"
+              data-bs-slide-to="0"
+              class="active"
+              aria-current="true"
+              aria-label="Slide 1"
+            ></button>
+            <button
+              type="button"
+              data-bs-target="#carouselExampleIndicators"
+              data-bs-slide-to="1"
+              aria-label="Slide 2"
+            ></button>
+            <button
+              type="button"
+              data-bs-target="#carouselExampleIndicators"
+              data-bs-slide-to="2"
+              aria-label="Slide 3"
+            ></button>
+          </div>
+          <div class="carousel-inner">
+            <div class="carousel-item active">
+              <img src="..." class="d-block w-100" alt="..." />
+            </div>
+            <div class="carousel-item">
+              <img src="..." class="d-block w-100" alt="..." />
+            </div>
+            <div class="carousel-item">
+              <img src="..." class="d-block w-100" alt="..." />
+            </div>
+          </div>
+          <button
+            class="carousel-control-prev"
+            type="button"
+            data-bs-target="#carouselExampleIndicators"
+            data-bs-slide="prev"
+          >
+            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Previous</span>
+          </button>
+          <button
+            class="carousel-control-next"
+            type="button"
+            data-bs-target="#carouselExampleIndicators"
+            data-bs-slide="next"
+          >
+            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Next</span>
+          </button>
+        </div>
 
-      <div class="index-info">
-        <div class="shipping">
-          <i class="ri-truck-line"></i>
-          <span>Fast shipping</span>
-        </div>
-        <div class="payment">
-          <i class="ri-secure-payment-fill"></i>
-          <span>Secure payment</span>
-        </div>
-        <div class="recycle">
-          <i class="ri-recycle-line"></i>
-          <span>We recycle your old pair</span>
-        </div>
-      </div>
+        <!--Additional info-->
 
-      <h2>Favorite brands</h2>
+        <div class="index-info">
+          <div class="shipping">
+            <i class="ri-truck-line"></i>
+            <span>Fast shipping</span>
+          </div>
+          <div class="payment">
+            <i class="ri-secure-payment-fill"></i>
+            <span>Secure payment</span>
+          </div>
+          <div class="recycle">
+            <i class="ri-recycle-line"></i>
+            <span>We recycle your old pair</span>
+          </div>
+        </div>
+
+        <!--Links to favorite brands-->
+
+        <h2>Favorite brands</h2>
+      </div>
     </main>
+
     <footer>
       <div class="footer">
         <p>Copyrights Utv&aelig;r, all rights reserved</p>
