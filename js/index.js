@@ -1,7 +1,9 @@
 import { displayNav } from "./ui/common/displayNav.js";
 import { baseUrl } from "./settings/api.js";
-const heroImg = document.querySelector(".hero-image");
-const url = baseUrl + "home";
+import { displayHeroImage } from "./ui/homepage/displayHeroImage.js";
+import { displayFeaturedProducts } from "./ui/homepage/displayFeaturedProducts.js";
+const imageUrl = baseUrl + "home";
+const featuredUrl = baseUrl + "products";
 
 // display top nav
 displayNav();
@@ -9,21 +11,23 @@ displayNav();
 // Display hero image on homepage
 (async function callHeroImg() {
   try {
-    const response = await fetch(url);
+    const response = await fetch(imageUrl);
     const json = await response.json();
 
-    console.log(json);
-    displayImage(json);
+    displayHeroImage(json);
   } catch (error) {
     console.log(error);
   }
 })();
 
-function displayImage(image) {
-  const imageUrl = image.hero_banner.formats.large.url;
-  const imageAlt = image.hero_banner_alt_text;
+// Display Featured Products
+(async function featuredProducts() {
+  try {
+    const response = await fetch(featuredUrl);
+    const json = await response.json();
 
-  heroImg.innerHTML = `<div>
-                          <img src="${imageUrl}" alt="${imageAlt}">
-                        </div>`;
-}
+    displayFeaturedProducts(json);
+  } catch (error) {
+    console.log(error);
+  }
+})();

@@ -9,8 +9,10 @@ export function displayNav() {
   }">Sign in</a>`;
 
   if (username) {
-    authLink = `<a id="logout" class="nav-link"><i class="ri-logout-circle-r-line"></i></a>
-                    <span>Hi ${username}</span>`;
+    authLink = `<a id="logout" class="nav-link">
+                  <i class="ri-logout-circle-r-line"></i>
+                  <span>Hi, ${username}</span>
+                </a>`;
   }
 
   const navbar = document.querySelector(".navbar");
