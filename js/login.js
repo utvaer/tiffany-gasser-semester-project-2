@@ -4,7 +4,6 @@ import { saveToken, saveUser } from "./utils/storage.js";
 const message = document.querySelector(".message-container");
 const form = document.querySelector("form");
 const username = document.querySelector("#floatingUsername");
-const email = document.querySelector("#floatingInput");
 const password = document.querySelector("#floatingPassword");
 
 form.addEventListener("submit", submitForm);
@@ -14,21 +13,16 @@ function submitForm(event) {
   message.innerHTML = "";
 
   const usernameValue = username.value.trim();
-  const emailValue = email.value.trim();
   const passwordValue = password.value.trim();
 
-  if (
-    usernameValue.length === 0 ||
-    emailValue.length === 0 ||
-    passwordValue === 0
-  ) {
+  if (usernameValue.length === 0 || passwordValue === 0) {
     message.innerHTML = "we need something you know";
   }
 
-  completeLogin(usernameValue, emailValue, passwordValue);
+  completeLogin(usernameValue, passwordValue);
 }
 
-async function completeLogin(username, email, password) {
+async function completeLogin(username, password) {
   const url = baseUrl + "auth/local";
   const data = JSON.stringify({ identifier: username, password: password });
   const options = {

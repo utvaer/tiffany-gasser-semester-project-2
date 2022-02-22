@@ -19,6 +19,7 @@ export function getUsername() {
   if (user) {
     return user.username;
   }
+  return null;
 }
 
 function saveToStorage(key, value) {
