@@ -1,11 +1,16 @@
+import { displayNav } from "./ui/common/displayNav.js";
 import { baseUrl } from "./settings/api.js";
 import { saveToken, saveUser } from "./utils/storage.js";
 
 const message = document.querySelector(".message-container");
-const form = document.querySelector("form");
-const username = document.querySelector("#floatingUsername");
+const form = document.querySelector(".login-form");
+const username = document.querySelector("#floatingInput");
 const password = document.querySelector("#floatingPassword");
 
+// Display Main Nav
+displayNav();
+
+// Submit Log In Form
 form.addEventListener("submit", submitForm);
 
 function submitForm(event) {
@@ -22,6 +27,7 @@ function submitForm(event) {
   completeLogin(usernameValue, passwordValue);
 }
 
+// Check Log In Form
 async function completeLogin(username, password) {
   const url = baseUrl + "auth/local";
   const data = JSON.stringify({ identifier: username, password: password });
@@ -51,9 +57,3 @@ async function completeLogin(username, password) {
     console.log(error);
   }
 }
-
-/*function validateEmail(email) {
-  const regEx = /\S+@\S+\.\S+/;
-  const patternMatches = regEx.test(email);
-  return patternMatches;
-}*/
