@@ -1,6 +1,12 @@
 import { displayNav } from "./ui/common/displayNav.js";
 import { baseUrl } from "./settings/api.js";
 import { getToken } from "./utils/storage.js";
+import { deleteButton } from "./ui/products/deleteButton.js";
+
+const token = getToken();
+if (!token) {
+  location.href = "/";
+}
 
 // Display Main Nav
 displayNav();
@@ -9,9 +15,9 @@ const queryString = document.location.search;
 const params = new URLSearchParams(queryString);
 const id = params.get("id");
 
-//if (!id) {
-//  document.location.href = "/";
-//}
+if (!id) {
+  document.location.href = "/";
+}
 
 const url = baseUrl + "products/" + id;
 const editForm = document.querySelector("#edit-form");
@@ -31,6 +37,8 @@ const idInput = document.querySelector("#id");
     description.value = details.description;
     price.value = details.price;
     idInput.value = details.id;
+
+    deleteButton(details.id);
 
     console.log(details);
   } catch (error) {
@@ -70,7 +78,7 @@ async function updateProduct(title, brand, description, price, id) {
     description: description,
     price: price,
   });
-  const token = getToken();
+
   const options = {
     method: "PUT",
     body: data,

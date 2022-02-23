@@ -1,4 +1,5 @@
 import { getUsername } from "../../utils/storage.js";
+import logoutBtn from "./logoutBtn.js";
 
 export function displayNav() {
   const { pathname } = document.location;
@@ -11,7 +12,7 @@ export function displayNav() {
   if (username) {
     authLink = `<a href="add.html" id="logout" class="nav-link">
                   <i class="ri-logout-circle-r-line"></i>
-                  <span>Hi, ${username}</span>
+                  <button id="logout">Log Out ${username}</button>
                 </a>`;
   }
 
@@ -57,4 +58,5 @@ export function displayNav() {
                           </ul>
                         </div>
                       </div>`;
+  logoutBtn();
 }

@@ -2,6 +2,12 @@ import { displayNav } from "./ui/common/displayNav.js";
 import { baseUrl } from "./settings/api.js";
 import { getToken } from "./utils/storage.js";
 
+const token = getToken();
+if (!token) {
+  location.href = "/";
+}
+
+// Display Main Nav
 displayNav();
 
 const productForm = document.querySelector("#new-products-form");
@@ -44,7 +50,6 @@ async function addProduct(title, brand, description, price) {
     description: description,
     price: price,
   });
-  const token = getToken();
   const options = {
     method: "POST",
     body: data,

@@ -12,6 +12,7 @@ displayNav();
   try {
     const response = await fetch(productsUrl);
     const json = await response.json();
+    console.log(json);
 
     products.innerHTML = "";
     displayProducts(json);
