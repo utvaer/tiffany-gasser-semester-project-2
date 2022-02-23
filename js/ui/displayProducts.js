@@ -3,7 +3,7 @@ export function displayProducts(json) {
 
   json.forEach((product) => {
     products.innerHTML += `<div class="col-sm-6">
-                            <a href="productpage.html?id=${product.id}" class="card" style="width: 18rem;">
+                            <a href="edit.html?id=${product.id}" class="card" style="width: 18rem;">
                               <img src="${product.image.formats.small.url}" class="card-img-top" alt="${product.image_alt}">
                               <div class="card-body">
                                 <h5 class="card-title">${product.title}</h5>

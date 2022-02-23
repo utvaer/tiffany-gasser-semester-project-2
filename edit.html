@@ -27,6 +27,7 @@
       sizes="16x16"
       href="favicon_io/favicon-16x16.png"
     />
+    <link rel="manifest" href="/site.webmanifest" />
     <!-- CSS Stylesheet-->
     <link rel="stylesheet" href="css/styles.css" />
     <title>Document</title>
@@ -50,10 +51,10 @@
       </div>
     </header>
     <main>
-      <h1>Add new product</h1>
+      <h1>Edit product</h1>
 
-      <!--Add New Product Form-->
-      <form id="new-products-form">
+      <!--Update Product Form-->
+      <form id="edit-form">
         <div class="form-floating mb-3">
           <input
             type="text"
@@ -139,11 +140,12 @@
             <label class="form-check-label" for="exampleRadios3"> Men </label>
           </div>
         </div>-->
+        <input id="id" type="hidden" />
         <button type="submit" class="btn btn-primary">Primary</button>
       </form>
     </main>
     <footer></footer>
-    <script src="js/add.js" type="module"></script>
+    <script src="js/edit.js" type="module"></script>
     <script
       src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"
       integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p"

@@ -2,13 +2,17 @@ import { displayNav } from "./ui/common/displayNav.js";
 import { baseUrl } from "./settings/api.js";
 import { displayDetails } from "./ui/displayDetails.js";
 
+// Display Main Nav
+displayNav();
+
 const queryString = document.location.search;
 const params = new URLSearchParams(queryString);
 const id = params.get("id");
 const url = baseUrl + "products/" + id;
 
-// Display Main Nav
-displayNav();
+if (!id) {
+  document.location.href = "/";
+}
 
 // Display Product Information
 (async function getDetails() {
