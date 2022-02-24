@@ -54,6 +54,7 @@
 
       <!--Add New Product Form-->
       <form id="new-products-form">
+        <!--Product Title-->
         <div class="form-floating mb-3">
           <input
             type="text"
@@ -64,6 +65,7 @@
           <label for="floatingInput">Title</label>
         </div>
 
+        <!--Product Brand-->
         <div class="form-floating mb-3">
           <input
             type="text"
@@ -74,6 +76,7 @@
           <label for="floatingBrand">Brand</label>
         </div>
 
+        <!--Product Description-->
         <div class="form-floating">
           <textarea
             class="form-control mb-3"
@@ -83,6 +86,7 @@
           <label for="floatingTextarea">Product description</label>
         </div>
 
+        <!--Product Price-->
         <div class="form-floating mb-3">
           <input
             type="number"
@@ -93,16 +97,24 @@
           <label for="floatingPrice">Price USD</label>
         </div>
 
-        <!--<div class="input-group mb-3">
+        <!--Upload Image-->
+        <div class="input-group mb-3">
           <input type="file" class="form-control" id="inputGroupFile02" />
           <label class="input-group-text" for="inputGroupFile02">Upload</label>
         </div>
 
-        <div class="mb-3">
-          <label for="formFile" class="form-label">Upload image</label>
-          <input class="form-control" type="file" id="formFile" />
+        <!--Add Image Alt Text-->
+        <div class="form-floating mb-3">
+          <input
+            type="text"
+            class="form-control"
+            id="floatingAlt"
+            placeholder="Image Alt Text"
+          />
+          <label for="floatingBrand">Image Alt Text</label>
         </div>
 
+        <!--Style Selection-->
         <div>
           <label>Style</label>
           <div class="form-check">
@@ -111,7 +123,7 @@
               type="radio"
               name="exampleRadios"
               id="exampleRadios1"
-              value="option1"
+              value="Unisex"
             />
             <label class="form-check-label" for="exampleRadios1">
               Unisex
@@ -124,7 +136,7 @@
               type="radio"
               name="exampleRadios"
               id="exampleRadios2"
-              value="option2"
+              value="Women"
             />
             <label class="form-check-label" for="exampleRadios2"> Women </label>
           </div>
@@ -134,11 +146,25 @@
               type="radio"
               name="exampleRadios"
               id="exampleRadios3"
-              value="option3"
+              value="Men"
             />
             <label class="form-check-label" for="exampleRadios3"> Men </label>
           </div>
-        </div>-->
+        </div>
+
+        <!--Product Featured-->
+        <div class="form-check">
+          <input
+            class="form-check-input"
+            type="checkbox"
+            value=""
+            id="flexCheckDefault"
+          />
+          <label class="form-check-label" for="flexCheckDefault">
+            Featured Product
+          </label>
+        </div>
+
         <button type="submit" class="btn btn-primary">Primary</button>
       </form>
     </main>
