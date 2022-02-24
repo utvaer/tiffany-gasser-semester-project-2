@@ -23,7 +23,7 @@ const imageAlt = document.querySelector("#floatingAlt");
 
 //OBS NEED TO ADD IMAGE
 
-// SUbmit Form
+// Submit Form
 productForm.addEventListener("submit", submitForm);
 
 function submitForm(event) {
@@ -33,6 +33,7 @@ function submitForm(event) {
   const brandValue = brand.value.trim();
   const descriptionValue = description.value.trim();
   const priceValue = parseFloat(price.value);
+  const imageValue = image.value;
   const imageAltValue = imageAlt.value.trim();
   const styleValue = document.querySelector(
     'input[name="exampleRadios"]:checked'
@@ -57,7 +58,8 @@ function submitForm(event) {
     priceValue,
     featured.checked,
     imageAltValue,
-    styleValue
+    styleValue,
+    imageValue
   );
 }
 
@@ -83,7 +85,7 @@ async function addProduct(
   };
   //UPLOAD IMAGE BAD REQUEST 400
   const formData = new FormData();
-  formData.append("files.image", image, image.name);
+  formData.append("files.image", image);
   formData.append("data", JSON.stringify(data));
   const options = {
     method: "POST",

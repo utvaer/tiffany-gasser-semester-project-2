@@ -1,6 +1,11 @@
 import { displayNav } from "./ui/common/displayNav.js";
 import { baseUrl } from "./settings/api.js";
-import { saveToken, saveUser } from "./utils/storage.js";
+import { saveToken, saveUser, getToken } from "./utils/storage.js";
+
+const token = getToken();
+if (token) {
+  location.href = "/";
+}
 
 const message = document.querySelector(".message-container");
 const form = document.querySelector(".login-form");
@@ -48,7 +53,7 @@ async function completeLogin(username, password) {
       saveToken(json.jwt);
       saveUser(json.user);
 
-      location.href = "/add.html";
+      location.href = "/products.html";
     }
     if (json.error) {
       message.innerHTML = "incorrect log in details";
