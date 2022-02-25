@@ -3,10 +3,9 @@ import { displayProducts } from "../../ui/displayProducts.js";
 const searchBtn = document.querySelector(".search-btn");
 const product = document.querySelector(".product-detail");
 
-searchBtn.addEventListener("click", searchFile);
+searchBtn.addEventListener("submit", searchFile);
 
 export function searchFile(json) {
-  event.preventDefault();
   const searchInput = document.querySelector("#search-field");
   const searchValue = searchInput.value.trim().toLowerCase();
 

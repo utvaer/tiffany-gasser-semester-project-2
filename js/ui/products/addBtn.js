@@ -1,6 +1,7 @@
 export function addAdminAccess() {
   const addBtnContainer = document.querySelector(".admin-access-btn");
   const addPageTitle = document.querySelector(".admin-access-edit");
+
   addBtnContainer.innerHTML = `<button class="add">Add New Product</button>`;
   addPageTitle.innerHTML = `<h2>Edit Products<h2>`;
 

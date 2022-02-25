@@ -11,12 +11,6 @@ const productsUrl = baseUrl + "products";
 //display Main Nav
 displayNav();
 
-//Display Admin Add New Product
-const token = getToken();
-if (token) {
-  addAdminAccess();
-}
-
 // display products list
 (async function apiCall() {
   try {
@@ -31,6 +25,13 @@ if (token) {
   }
 })();
 
+//Display Admin Add New Product
+const token = getToken();
+if (token) {
+  addAdminAccess();
+}
+
+// SEarch function
 const searchBtn = document.querySelector(".search-btn");
 
 searchBtn.addEventListener("click", searchFile);
