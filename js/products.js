@@ -2,7 +2,8 @@ import { displayNav } from "./ui/common/displayNav.js";
 import { baseUrl } from "./settings/api.js";
 import { displayProducts } from "./ui/displayProducts.js";
 import { getToken } from "./utils/storage.js";
-import { addProductBtn } from "./ui/products/addBtn.js";
+import { addAdminAccess } from "./ui/products/addBtn.js";
+import { searchFile } from "./components/common/searchField.js";
 
 const products = document.querySelector(".row");
 const productsUrl = baseUrl + "products";
@@ -13,7 +14,7 @@ displayNav();
 //Display Admin Add New Product
 const token = getToken();
 if (token) {
-  addProductBtn();
+  addAdminAccess();
 }
 
 // display products list
@@ -29,3 +30,7 @@ if (token) {
     console.log(error);
   }
 })();
+
+const searchBtn = document.querySelector(".search-btn");
+
+searchBtn.addEventListener("click", searchFile);

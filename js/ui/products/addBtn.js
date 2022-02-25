@@ -1,10 +1,17 @@
-export function addProductBtn() {
+export function addAdminAccess() {
   const addBtnContainer = document.querySelector(".admin-access-btn");
+  const addPageTitle = document.querySelector(".admin-access-edit");
   addBtnContainer.innerHTML = `<button class="add">Add New Product</button>`;
+  addPageTitle.innerHTML = `<h2>Edit Products<h2>`;
 
   const addBtn = document.querySelector("button.add");
   addBtn.onclick = function () {
-    const addForm = document.querySelector(".admin-access-add-product-form");
+    location.href = "add.html";
+  };
+}
+
+// Form added in products page, did not work in addBtn.onclick
+/*const addForm = document.querySelector(".admin-access-add-product-form");
     addForm.innerHTML = `<h2>Add new product</h2>
 
       <!--Add New Product Form-->
@@ -121,6 +128,4 @@ export function addProductBtn() {
         </div>
 
         <button type="submit" class="btn btn-primary">Primary</button>
-      </form>`;
-  };
-}
+      </form>`;*/

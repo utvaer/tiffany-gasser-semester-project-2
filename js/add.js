@@ -33,7 +33,7 @@ function submitForm(event) {
   const brandValue = brand.value.trim();
   const descriptionValue = description.value.trim();
   const priceValue = parseFloat(price.value);
-  const imageValue = image.value;
+  const imageValue = image.files[0];
   const imageAltValue = imageAlt.value.trim();
   const styleValue = document.querySelector(
     'input[name="exampleRadios"]:checked'
@@ -70,7 +70,7 @@ async function addProduct(
   price,
   featured,
   imageAlt,
-  styleValue,
+  style,
   image
 ) {
   const url = baseUrl + "products";
@@ -81,17 +81,17 @@ async function addProduct(
     price: price,
     featured: featured,
     image_alt: imageAlt,
-    style: styleValue,
+    style: style,
   };
-  //UPLOAD IMAGE BAD REQUEST 400
+  //Access Denied (CORS)
   const formData = new FormData();
-  formData.append("files.image", image);
+  formData.append("files.image", image, image.name);
   formData.append("data", JSON.stringify(data));
   const options = {
     method: "POST",
-    body: data,
+    body: formData,
     headers: {
-      "Content-Type": "application/json",
+      //"Content-Type": "application/json",
       Authorization: `Bearer ${token}`,
     },
   };
