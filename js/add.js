@@ -21,8 +21,6 @@ const featured = document.querySelector("#flexCheckDefault");
 const image = document.querySelector("#inputGroupFile02");
 const imageAlt = document.querySelector("#floatingAlt");
 
-//OBS NEED TO ADD IMAGE
-
 // Submit Form
 productForm.addEventListener("submit", submitForm);
 
@@ -83,7 +81,7 @@ async function addProduct(
     image_alt: imageAlt,
     style: style,
   };
-  //Access Denied (CORS)
+
   const formData = new FormData();
   formData.append("files.image", image, image.name);
   formData.append("data", JSON.stringify(data));

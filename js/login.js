@@ -1,6 +1,7 @@
 import { displayNav } from "./ui/common/displayNav.js";
 import { baseUrl } from "./settings/api.js";
 import { saveToken, saveUser, getToken } from "./utils/storage.js";
+import displayMessage from "./components/common/displayMessage.js";
 
 const token = getToken();
 if (token) {
@@ -25,7 +26,9 @@ function submitForm(event) {
   const usernameValue = username.value.trim();
   const passwordValue = password.value.trim();
 
+  //might be redundant
   if (usernameValue.length === 0 || passwordValue === 0) {
+    displayMessage(error, "Incorrect credentials", message);
     message.innerHTML = "we need something you know";
   }
 
@@ -56,7 +59,8 @@ async function completeLogin(username, password) {
       location.href = "/products.html";
     }
     if (json.error) {
-      message.innerHTML = "incorrect log in details";
+      //DISPLAY MESSAGE NOT WORKING
+      displayMessage("Incorrect credentials", message);
     }
   } catch (error) {
     console.log(error);

@@ -59,6 +59,7 @@
 
       <!--Update Product Form-->
       <form id="edit-form">
+        <!--Update Product Title-->
         <div class="form-floating mb-3">
           <input
             type="text"
@@ -69,6 +70,7 @@
           <label for="floatingInput">Title</label>
         </div>
 
+        <!--Update Product Brand-->
         <div class="form-floating mb-3">
           <input
             type="text"
@@ -79,6 +81,7 @@
           <label for="floatingBrand">Brand</label>
         </div>
 
+        <!--Update Product Description-->
         <div class="form-floating">
           <textarea
             class="form-control mb-3"
@@ -88,6 +91,7 @@
           <label for="floatingTextarea">Product description</label>
         </div>
 
+        <!--Update Product Price-->
         <div class="form-floating mb-3">
           <input
             type="number"
@@ -98,16 +102,26 @@
           <label for="floatingPrice">Price USD</label>
         </div>
 
-        <!--<div class="input-group mb-3">
+        <!--Update Image-->
+        <div class="input-group mb-3">
           <input type="file" class="form-control" id="inputGroupFile02" />
-          <label class="input-group-text" for="inputGroupFile02">Upload</label>
+          <label class="input-group-text" for="inputGroupFile02"
+            >Update Product Image</label
+          >
         </div>
 
-        <div class="mb-3">
-          <label for="formFile" class="form-label">Upload image</label>
-          <input class="form-control" type="file" id="formFile" />
+        <!--Add Image Alt Text-->
+        <div class="form-floating mb-3">
+          <input
+            type="text"
+            class="form-control"
+            id="floatingAlt"
+            placeholder="Image Alt Text"
+          />
+          <label for="floatingBrand">Alternative Text for Image</label>
         </div>
 
+        <!--Update Style Selection-->
         <div>
           <label>Style</label>
           <div class="form-check">
@@ -116,7 +130,7 @@
               type="radio"
               name="exampleRadios"
               id="exampleRadios1"
-              value="option1"
+              value="Unisex"
             />
             <label class="form-check-label" for="exampleRadios1">
               Unisex
@@ -129,7 +143,7 @@
               type="radio"
               name="exampleRadios"
               id="exampleRadios2"
-              value="option2"
+              value="Women"
             />
             <label class="form-check-label" for="exampleRadios2"> Women </label>
           </div>
@@ -139,14 +153,31 @@
               type="radio"
               name="exampleRadios"
               id="exampleRadios3"
-              value="option3"
+              value="Men"
             />
             <label class="form-check-label" for="exampleRadios3"> Men </label>
           </div>
-        </div>-->
-        <input id="id" type="hidden" />
-        <button type="submit" class="btn btn-primary">Primary</button>
+        </div>
 
+        <!--Product Featured-->
+        <div class="form-check">
+          <input
+            class="form-check-input"
+            type="checkbox"
+            value=""
+            id="flexCheckDefault"
+          />
+          <label class="form-check-label" for="flexCheckDefault">
+            Featured Product
+          </label>
+        </div>
+
+        <!--Hidden ID Input-->
+        <input id="id" type="hidden" />
+
+        <!--Buttons-->
+        <button type="submit" class="btn btn-primary">Primary</button>
+        <a class="btn btn-primary" href="products.html" role="button">Cancel</a>
         <div class="delete-btn-container"></div>
       </form>
     </main>
