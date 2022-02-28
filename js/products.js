@@ -3,7 +3,7 @@ import { baseUrl } from "./settings/api.js";
 import { displayProducts } from "./ui/displayProducts.js";
 import { getToken } from "./utils/storage.js";
 import { addAdminAccess } from "./ui/products/addBtn.js";
-import { searchFile } from "./components/common/searchField.js";
+import { searchProducts } from "./components/common/searchProducts.js";
 
 const products = document.querySelector(".row");
 const productsUrl = baseUrl + "products";
@@ -20,6 +20,7 @@ displayNav();
 
     products.innerHTML = "";
     displayProducts(json);
+    searchProducts(json);
   } catch (error) {
     console.log(error);
   }
@@ -30,8 +31,3 @@ const token = getToken();
 if (token) {
   addAdminAccess();
 }
-
-// SEarch function
-const searchBtn = document.querySelector(".search-btn");
-
-searchBtn.addEventListener("click", searchFile);

@@ -37,18 +37,21 @@ const style = document.querySelectorAll('input[name="exampleRadios"]');
     const response = await fetch(url);
     const details = await response.json();
 
+    //Display Product to Edit
     title.value = details.title;
     brand.value = details.brand;
     description.value = details.description;
     price.value = details.price;
     idInput.value = details.id;
-    featured.value = details.featured;
+    //Featured not working
+    featured.checked = details.featured;
     //IMG display not working
     image.file = details.image.url;
     imageAlt.value = details.image_alt;
     //STyle selection not working
     style.checked = details.style;
 
+    //Display Delete Button
     deleteButton(details.id);
 
     console.log(details);

@@ -1,5 +1,7 @@
 @import "partials/custom";
 
+//Remove the ones I dont need?
+
 // scss-docs-start import-stack
 // Configuration
 @import "../scss-bootstrap/functions";
@@ -46,3 +48,7 @@
 // Utilities
 @import "../scss-bootstrap/utilities/api";
 // scss-docs-end import-stack
+
+//Own additional scss files
+@import "partials/typography";
+@import "partials/navbar";

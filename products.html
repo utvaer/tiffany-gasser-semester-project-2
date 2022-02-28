@@ -4,6 +4,8 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!--Fonts import-->
+    <link rel="stylesheet" href="https://use.typekit.net/rnq5edb.css" />
     <!-- Icons-->
     <link
       rel="stylesheet"
@@ -39,7 +41,7 @@
 
       <!--Search Field-->
       <div class="search-field">
-        <form class="d-flex">
+        <div class="d-flex">
           <input
             id="search-input"
             class="form-control me-2"
@@ -50,7 +52,7 @@
           <button class="btn btn-outline-success search-btn" type="submit">
             <i class="ri-search-line"></i>
           </button>
-        </form>
+        </div>
       </div>
       <!--End of Top Nav-->
     </header>
@@ -63,6 +65,8 @@
 
         <!--Display Products-->
         <div class="products-container">
+          <div class="message-container"></div>
+          <div class="search-result"></div>
           <div class="row">
             <!--Spinner -->
             <div class="loader">

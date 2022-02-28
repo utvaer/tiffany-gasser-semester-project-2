@@ -12,7 +12,7 @@ export function displayNav() {
   if (username) {
     authLink = `<a href="add.html" id="logout" class="nav-link">
                   <i class="ri-logout-circle-r-line"></i>
-                  <button id="logout">Log Out ${username}</button>
+                  <span>${username}</span>
                 </a>`;
   }
 
