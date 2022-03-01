@@ -10,5 +10,6 @@ export function displayDetails(details) {
                         <p>USD ${details.price}</h6>
                         <p>Brand ${details.brand}</p>
                         <p>${details.description}</p>
+                        <button class="btn btn-primary add-bag-btn">Add to Bag</button>
                        </div> `;
 }

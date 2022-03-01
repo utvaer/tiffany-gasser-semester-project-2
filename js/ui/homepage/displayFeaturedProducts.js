@@ -5,7 +5,7 @@ export function displayFeaturedProducts(products) {
     if (!products[i].featured) {
       continue;
     }
-    featuredContainer.innerHTML += `<div class="col-sm-3 product-card">
+    featuredContainer.innerHTML += `<div class="col-sm-3 product-card product-featured">
                             <a href="productpage.html?id=${products[i].id}" class="card">
                               <img src="${products[i].image.formats.small.url}" class="card-img-top" alt="${products[i].image_alt}"></img>
                               <div class="card-body">

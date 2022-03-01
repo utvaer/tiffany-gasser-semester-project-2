@@ -56,11 +56,13 @@ async function completeLogin(username, password) {
       saveToken(json.jwt);
       saveUser(json.user);
 
-      location.href = "/products.html";
+      location.href = "/index.html";
     }
     if (json.error) {
-      //DISPLAY MESSAGE NOT WORKING
-      displayMessage("Incorrect credentials", message);
+      displayMessage(
+        "Incorrect credentials, please try again",
+        ".message-container"
+      );
     }
   } catch (error) {
     console.log(error);

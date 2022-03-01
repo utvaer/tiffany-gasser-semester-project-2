@@ -4,7 +4,11 @@
 
 .index-info {
   background-color: $secondary;
+  font-size: 1.2em;
   display: flex;
   flex-direction: row;
   justify-content: space-evenly;
+  padding: 2em 0;
+  border-radius: 4px;
+  margin: 2em 0;
 }

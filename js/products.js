@@ -31,3 +31,24 @@ const token = getToken();
 if (token) {
   addAdminAccess();
 }
+
+/*const brandSelection = document.querySelectorAll(".brand-category");
+brandSelection.forEach(function (brand) {
+  brand.onclick = function (event) {
+    const brandChosen = event.target.value;
+    console.log(brandChosen);
+    const brandUrl = baseUrl + `products?brand=${brandChosen}`;
+    products.innerHTML = "";
+    displayProducts(brandUrl);
+  };
+});*/
+const brandSelection = document.querySelectorAll(".brand-category");
+
+/*function sortByBrand(brands) {
+const brandSelection = document.querySelectorAll(".brand-category");
+for (let i = 0; i < brands.length; i++) {
+  const brandChosen
+}
+
+
+}*/

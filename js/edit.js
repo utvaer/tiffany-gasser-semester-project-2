@@ -65,6 +65,10 @@ editForm.addEventListener("submit", submitForm);
 
 function submitForm(event) {
   event.preventDefault();
+  editBtn.innerHTML = `<button class="btn btn-primary" type="button" disabled>
+                        <span class="spinner-grow spinner-grow-sm" role="status" aria-hidden="true"></span>
+                        Loading...
+                      </button>`;
 
   const titleValue = title.value.trim();
   const brandValue = brand.value.trim();
@@ -101,6 +105,10 @@ function submitForm(event) {
     imageValue
   );
 }
+
+// Update Product Information
+
+const editBtn = document.querySelector(".edit");
 
 async function updateProduct(
   title,
@@ -141,8 +149,7 @@ async function updateProduct(
     console.log(json);
 
     if (json.updated_at) {
-      //Change to displayMessage();
-      console.log("ya did it bitch");
+      alert("This product was successfully edited in our system.");
       document.location.href = "/products.html";
     }
 
