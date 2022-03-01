@@ -5,8 +5,8 @@ export function displayProducts(json) {
   products.innerHTML = "";
 
   for (let i = 0; i < json.length; i++) {
-    products.innerHTML += `<div class="col-sm-6">
-                            <a href="productpage.html?id=${json[i].id}" class="card" style="width: 18rem;">
+    products.innerHTML += `<div class="col-md-6 col-lg-4 col-xl-3 product-card">
+                            <a href="productpage.html?id=${json[i].id}" class="card">
                               <img src="${json[i].image.formats.small.url}" class="card-img-top" alt="${json[i].image_alt}"></img>
                               <div class="card-body">
                                 <h5 class="card-title">${json[i].title}</h5>

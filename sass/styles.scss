@@ -50,5 +50,8 @@
 // scss-docs-end import-stack
 
 //Own additional scss files
+@import "partials/layout";
 @import "partials/typography";
 @import "partials/navbar";
+@import "partials/home";
+@import "partials/products";

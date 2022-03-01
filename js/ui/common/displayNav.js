@@ -7,7 +7,7 @@ export function displayNav() {
 
   let authLink = `<a href="login.html" class="nav-link ${
     pathname === "/login.html" ? "active" : ""
-  }">Sign in</a>`;
+  }"><i class="ri-user-line"></i></a>`;
 
   if (username) {
     authLink = `<a href="add.html" id="logout" class="nav-link">
@@ -22,7 +22,7 @@ export function displayNav() {
                           pathname === "/" || pathname === "/index.html"
                             ? "active"
                             : ""
-                        }" href="index.html">Urban Feet</a>
+                        }" href="index.html">Urban</br> Feet</a>
                         <button
                           class="navbar-toggler"
                           type="button"

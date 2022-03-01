@@ -5053,11 +5053,11 @@ fieldset:disabled .btn {
 }
 
 .navbar-dark .navbar-brand {
-  color: #e5f280;
+  color: white;
 }
 
 .navbar-dark .navbar-brand:hover, .navbar-dark .navbar-brand:focus {
-  color: #e5f280;
+  color: white;
 }
 
 .navbar-dark .navbar-nav .nav-link {
@@ -5074,7 +5074,7 @@ fieldset:disabled .btn {
 
 .navbar-dark .navbar-nav .show > .nav-link,
 .navbar-dark .navbar-nav .nav-link.active {
-  color: #e5f280;
+  color: white;
 }
 
 .navbar-dark .navbar-toggler {
@@ -5093,7 +5093,7 @@ fieldset:disabled .btn {
 .navbar-dark .navbar-text a,
 .navbar-dark .navbar-text a:hover,
 .navbar-dark .navbar-text a:focus {
-  color: #e5f280;
+  color: white;
 }
 
 .card {
@@ -11951,6 +11951,26 @@ fieldset:disabled .btn {
   }
 }
 
+.footer {
+  background-color: #e5f280;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  padding: 1.2em;
+}
+
+.footer a {
+  color: #111;
+  text-decoration: none;
+}
+
+.footer a:hover {
+  text-decoration: underline;
+}
+
 body {
   font-family: "quasimoda", sans-serif;
 }
@@ -11965,13 +11985,61 @@ h1, .h1 {
   margin: 1em 0;
 }
 
+.navbar {
+  text-transform: uppercase;
+}
+
 .navbar-brand {
   font-family: "kyrial-display-pro", sans-serif;
+  color: white;
 }
 
 .navbar i {
   background-color: #beb6f2;
   padding: 0.5em;
   border-radius: 50%;
+}
+
+.hero-img {
+  max-width: 100%;
+}
+
+.index-info {
+  background-color: #dbd0f2;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
+}
+
+.product-card {
+  margin-bottom: 4em;
+}
+
+.product-card a {
+  color: #111;
+  text-decoration: none;
+}
+
+.card {
+  height: 400px;
+}
+
+.card-img-top {
+  -o-object-fit: cover;
+     object-fit: cover;
+  width: 100%;
+  height: 250px;
+}
+
+.add-bag-btn {
+  display: block;
+  width: 100%;
 }
 /*# sourceMappingURL=styles.css.map */

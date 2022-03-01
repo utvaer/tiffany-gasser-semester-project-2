@@ -1,0 +1,14 @@
+.footer {
+  background-color: $light;
+  display: flex;
+  justify-content: space-between;
+  padding: 1.2em;
+}
+.footer a {
+  color: #111;
+  text-decoration: none;
+}
+
+.footer a:hover {
+  text-decoration: underline;
+}
