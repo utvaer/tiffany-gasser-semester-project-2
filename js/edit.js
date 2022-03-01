@@ -31,6 +31,7 @@ const featured = document.querySelector("#flexCheckDefault");
 const image = document.querySelector("#inputGroupFile02");
 const imageAlt = document.querySelector("#floatingAlt");
 const style = document.querySelectorAll('input[name="exampleRadios"]');
+const editBtn = document.querySelector(".edit");
 
 (async function () {
   try {
@@ -67,7 +68,7 @@ function submitForm(event) {
   event.preventDefault();
   editBtn.innerHTML = `<button class="btn btn-primary" type="button" disabled>
                         <span class="spinner-grow spinner-grow-sm" role="status" aria-hidden="true"></span>
-                        Loading...
+                        Updating...
                       </button>`;
 
   const titleValue = title.value.trim();
@@ -107,8 +108,6 @@ function submitForm(event) {
 }
 
 // Update Product Information
-
-const editBtn = document.querySelector(".edit");
 
 async function updateProduct(
   title,

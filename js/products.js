@@ -32,6 +32,7 @@ if (token) {
   addAdminAccess();
 }
 
+// FILTER BY WORK IN PROGRESS
 /*const brandSelection = document.querySelectorAll(".brand-category");
 brandSelection.forEach(function (brand) {
   brand.onclick = function (event) {
@@ -41,14 +42,15 @@ brandSelection.forEach(function (brand) {
     products.innerHTML = "";
     displayProducts(brandUrl);
   };
-});*/
-const brandSelection = document.querySelectorAll(".brand-category");
+});
 
-/*function sortByBrand(brands) {
-const brandSelection = document.querySelectorAll(".brand-category");
-for (let i = 0; i < brands.length; i++) {
-  const brandChosen
-}
-
-
+function selectBrand(json) {
+  for (let i = 0; i < json.length; i++) {
+    const brandSelection = document.querySelectorAll(".brand-category");
+    brandSelection.onclick = function (event) {
+      const brandChosen = event.target.value;
+      console.log(brandChosen);
+      console.log("hi");
+    };
+  }
 }*/

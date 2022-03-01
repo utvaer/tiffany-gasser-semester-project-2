@@ -5,7 +5,7 @@ export function displayFeaturedProducts(products) {
     if (!products[i].featured) {
       continue;
     }
-    featuredContainer.innerHTML += `<div class="col-sm-3 product-card product-featured">
+    featuredContainer.innerHTML += `<div class="col-sm-6 col-md-4 col-lg-3 product-card product-featured">
                             <a href="productpage.html?id=${products[i].id}" class="card">
                               <img src="${products[i].image.formats.small.url}" class="card-img-top" alt="${products[i].image_alt}"></img>
                               <div class="card-body">
@@ -14,7 +14,7 @@ export function displayFeaturedProducts(products) {
                                 <p class="card-text">${products[i].brand}</p>
                               </div>                              
                             </a>
-                            <button class="add-bag-btn">Add to Bag</button>
+                            <button class="btn btn-primary add-bag-btn">Add to Bag</button>
                           </div>`;
   }
 }

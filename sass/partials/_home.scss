@@ -1,14 +1,16 @@
 .hero-img {
   max-width: 100%;
+  display: block;
+  margin: 0 auto;
 }
 
 .index-info {
   background-color: $secondary;
   font-size: 1.2em;
   display: flex;
-  flex-direction: row;
+  flex-direction: column;
   justify-content: space-evenly;
-  padding: 2em 0;
+  padding: 2em 0.5em;
   border-radius: 4px;
   margin: 2em 0;
 }

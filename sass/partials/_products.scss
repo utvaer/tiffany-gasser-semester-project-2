@@ -1,12 +1,13 @@
 .product-card {
-  margin-bottom: 4em;
+  border: 0.1px solid #111;
+  margin-bottom: 3em;
 }
 .product-card a {
   color: #111;
   text-decoration: none;
 }
 .card {
-  height: 400px;
+  height: fit-content;
   border: none;
 }
 .card-img-top {

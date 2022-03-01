@@ -56,139 +56,154 @@
       <!--End of Top Nav-->
     </header>
     <main>
-      <!--Breadcrumb-->
-      <nav style="--bs-breadcrumb-divider: '>'" aria-label="breadcrumb">
-        <ol class="breadcrumb">
-          <li class="breadcrumb-item">
-            <a href="products.html">All Sneakers</a>
-          </li>
-          <li class="breadcrumb-item active page" aria-current="page">
-            Add New Product
-          </li>
-        </ol>
-      </nav>
-      <!--end of breadcrumb-->
+      <div class="container">
+        <!--Breadcrumb-->
+        <nav style="--bs-breadcrumb-divider: '>'" aria-label="breadcrumb">
+          <ol class="breadcrumb">
+            <li class="breadcrumb-item">
+              <a href="products.html">All Sneakers</a>
+            </li>
+            <li class="breadcrumb-item active page" aria-current="page">
+              Add New Product
+            </li>
+          </ol>
+        </nav>
+        <!--end of breadcrumb-->
 
-      <h2>Add new product</h2>
+        <h2>Add new product</h2>
 
-      <!--Add New Product Form-->
-      <form id="new-products-form">
-        <!--Product Title-->
-        <div class="form-floating mb-3">
-          <input
-            type="text"
-            class="form-control"
-            id="floatingInput"
-            placeholder="Title"
-          />
-          <label for="floatingInput">Title</label>
-        </div>
+        <!--Add New Product Form-->
+        <form id="new-products-form">
+          <!--Product Title-->
+          <div class="form-floating mb-3">
+            <input
+              type="text"
+              class="form-control"
+              id="floatingInput"
+              placeholder="Title"
+              required
+            />
+            <label for="floatingInput">Title</label>
+          </div>
 
-        <!--Product Brand-->
-        <div class="form-floating mb-3">
-          <input
-            type="text"
-            class="form-control"
-            id="floatingBrand"
-            placeholder="Brand"
-          />
-          <label for="floatingBrand">Brand</label>
-        </div>
+          <!--Product Brand-->
+          <div class="form-floating mb-3">
+            <input
+              type="text"
+              class="form-control"
+              id="floatingBrand"
+              placeholder="Brand"
+              required
+            />
+            <label for="floatingBrand">Brand</label>
+          </div>
 
-        <!--Product Description-->
-        <div class="form-floating">
-          <textarea
-            class="form-control mb-3"
-            placeholder="Product description"
-            id="floatingTextarea"
-          ></textarea>
-          <label for="floatingTextarea">Product description</label>
-        </div>
+          <!--Product Description-->
+          <div class="form-floating">
+            <textarea
+              class="form-control mb-3"
+              placeholder="Product description"
+              id="floatingTextarea"
+              required
+            ></textarea>
+            <label for="floatingTextarea">Product description</label>
+          </div>
 
-        <!--Product Price-->
-        <div class="form-floating mb-3">
-          <input
-            type="number"
-            class="form-control"
-            id="floatingPrice"
-            placeholder="Price"
-          />
-          <label for="floatingPrice">Price USD</label>
-        </div>
+          <!--Product Price-->
+          <div class="form-floating mb-3">
+            <input
+              type="number"
+              class="form-control"
+              id="floatingPrice"
+              placeholder="Price"
+              required
+            />
+            <label for="floatingPrice">Price USD</label>
+          </div>
 
-        <!--Upload Product Image-->
-        <div class="input-group mb-3">
-          <input type="file" class="form-control" id="inputGroupFile02" />
-          <label class="input-group-text" for="inputGroupFile02"
-            >Upload Product Image</label
-          >
-        </div>
+          <!--Upload Product Image-->
+          <div class="input-group mb-3">
+            <input
+              type="file"
+              class="form-control"
+              id="inputGroupFile02"
+              required
+            />
+            <label class="input-group-text" for="inputGroupFile02"
+              >Upload Product Image</label
+            >
+          </div>
 
-        <!--Add Image Alt Text-->
-        <div class="form-floating mb-3">
-          <input
-            type="text"
-            class="form-control"
-            id="floatingAlt"
-            placeholder="Image Alt Text"
-          />
-          <label for="floatingBrand">Alternative Text for Image</label>
-        </div>
+          <!--Add Image Alt Text-->
+          <div class="form-floating mb-3">
+            <input
+              type="text"
+              class="form-control"
+              id="floatingAlt"
+              placeholder="Image Alt Text"
+              required
+            />
+            <label for="floatingBrand">Alternative Text for Image</label>
+          </div>
 
-        <!--Style Selection-->
-        <div>
-          <label>Style</label>
+          <!--Style Selection-->
+          <div>
+            <label>Style</label>
+            <div class="form-check">
+              <input
+                class="form-check-input"
+                type="radio"
+                name="exampleRadios"
+                id="exampleRadios1"
+                value="Unisex"
+              />
+              <label class="form-check-label" for="exampleRadios1">
+                Unisex
+              </label>
+            </div>
+
+            <div class="form-check">
+              <input
+                class="form-check-input"
+                type="radio"
+                name="exampleRadios"
+                id="exampleRadios2"
+                value="Women"
+              />
+              <label class="form-check-label" for="exampleRadios2">
+                Women
+              </label>
+            </div>
+            <div class="form-check mb-3">
+              <input
+                class="form-check-input"
+                type="radio"
+                name="exampleRadios"
+                id="exampleRadios3"
+                value="Men"
+              />
+              <label class="form-check-label" for="exampleRadios3"> Men </label>
+            </div>
+          </div>
+
+          <!--Product Featured-->
           <div class="form-check">
             <input
               class="form-check-input"
-              type="radio"
-              name="exampleRadios"
-              id="exampleRadios1"
-              value="Unisex"
+              type="checkbox"
+              value=""
+              id="flexCheckDefault"
             />
-            <label class="form-check-label" for="exampleRadios1">
-              Unisex
+            <label class="form-check-label" for="flexCheckDefault">
+              Featured Product
             </label>
           </div>
 
-          <div class="form-check">
-            <input
-              class="form-check-input"
-              type="radio"
-              name="exampleRadios"
-              id="exampleRadios2"
-              value="Women"
-            />
-            <label class="form-check-label" for="exampleRadios2"> Women </label>
-          </div>
-          <div class="form-check mb-3">
-            <input
-              class="form-check-input"
-              type="radio"
-              name="exampleRadios"
-              id="exampleRadios3"
-              value="Men"
-            />
-            <label class="form-check-label" for="exampleRadios3"> Men </label>
-          </div>
-        </div>
-
-        <!--Product Featured-->
-        <div class="form-check">
-          <input
-            class="form-check-input"
-            type="checkbox"
-            value=""
-            id="flexCheckDefault"
-          />
-          <label class="form-check-label" for="flexCheckDefault">
-            Featured Product
-          </label>
-        </div>
-
-        <!--Submit Button-->
-        <button type="submit" class="btn btn-primary">Primary</button>
-      </form>
+          <!--Submit Button-->
+          <div class="add-bn"></div>
+          <button type="submit" class="btn btn-primary">Primary</button>
+        </form>
+      </div>
     </main>
     <footer></footer>
     <script src="js/add.js" type="module"></script>

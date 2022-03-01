@@ -5,11 +5,15 @@ export function displayProducts(json) {
   products.innerHTML = "";
 
   for (let i = 0; i < json.length; i++) {
-    products.innerHTML += `<div class="col-md-6 col-lg-4 col-xl-3 product-card">
-                            <a href="productpage.html?id=${json[i].id}" class="card">
-                              <img src="${json[i].image.formats.small.url}" class="card-img-top" alt="${json[i].image_alt}"></img>
+    const productId = json[i].id;
+    const productTitle = json[i].title;
+    const productImg = json[i].image.formats.small.url;
+
+    products.innerHTML += `<div class="col-sm-6 col-md-4 col-lg-3 product-card">
+                            <a href="productpage.html?id=${productId}" class="card">
+                              <img src="${productImg}" class="card-img-top" alt="${json[i].image_alt}"></img>
                               <div class="card-body">
-                                <h5 class="card-title">${json[i].title}</h5>
+                                <h5 class="card-title">${productTitle}</h5>
                                 <h6 class="card-subtitle mb-2 text-muted">USD ${json[i].price}</h6>
                                 <p class="card-text">${json[i].brand}</p>
                               </div>

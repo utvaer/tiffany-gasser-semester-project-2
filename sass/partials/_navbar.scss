@@ -1,5 +1,6 @@
-.navbar {
-  text-transform: uppercase;
+.navbar > .container-fluid {
+  display: flex;
+  justify-content: space-between;
 }
 
 .navbar-brand {
@@ -11,4 +12,8 @@
   background-color: $secondary-dark;
   padding: 0.5em;
   border-radius: 50%;
+  &:hover {
+    background-color: $light;
+    color: $primary;
+  }
 }
