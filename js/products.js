@@ -80,6 +80,9 @@ function setItems(json) {
   let cartItems = localStorage.getItem("productsInBag");
   cartItems = JSON.parse(cartItems);
   console.log("my cartItems are", cartItems);
+  if (cartItems) {
+    cartItems[json];
+  }
   localStorage.setItem("productsInBag", JSON.stringify(json));
 }
 ProductsinBag();
