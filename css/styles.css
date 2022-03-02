@@ -11955,6 +11955,10 @@ h1, .h1, h2, .h2, h3, .h3 {
   text-align: center;
 }
 
+.breadcrumb {
+  margin-top: 2em;
+}
+
 .footer {
   background-color: #e5f280;
   display: -webkit-box;
@@ -12039,7 +12043,6 @@ h1, .h1 {
 }
 
 .product-card {
-  border: 0.1px solid #111;
   margin-bottom: 3em;
 }
 
@@ -12065,5 +12068,29 @@ h1, .h1 {
 .add-bag-btn {
   display: block;
   width: 100%;
+}
+
+.product-detail {
+  margin: 10% 0;
+}
+
+.details-img {
+  height: auto;
+  max-height: 500px;
+  width: 90%;
+  -o-object-fit: cover;
+     object-fit: cover;
+  display: block;
+  margin: 0 auto;
+}
+
+.login-page {
+  margin: 10% 0;
+}
+
+.login-img {
+  width: 100%;
+  height: auto;
+  margin-top: 1em;
 }
 /*# sourceMappingURL=styles.css.map */
