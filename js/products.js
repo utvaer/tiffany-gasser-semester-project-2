@@ -1,7 +1,7 @@
 import { displayNav } from "./ui/common/displayNav.js";
 import { baseUrl } from "./settings/api.js";
 import { displayProducts } from "./ui/displayProducts.js";
-import { clearStorage, getToken, saveToStorage } from "./utils/storage.js";
+import { clearStorage, getToken } from "./utils/storage.js";
 import { addAdminAccess } from "./ui/products/addBtn.js";
 import { searchProducts } from "./components/common/searchProducts.js";
 
@@ -21,9 +21,7 @@ displayNav();
     products.innerHTML = "";
     displayProducts(json);
     searchProducts(json);
-    addToBag();
-
-    // ADD TO CART
+    addToBag(json);
   } catch (error) {
     console.log(error);
   }
@@ -36,7 +34,7 @@ if (token) {
 }
 
 //add to bag
-
+let amountDisplay = document.querySelector(".cart span");
 const shoppingBag = [
   {
     productId: 1,
@@ -44,22 +42,51 @@ const shoppingBag = [
   },
 ];
 
-function addToBag() {
+function addToBag(json) {
   let addBagBtn = document.querySelectorAll(".add-bag-btn");
 
   for (let i = 0; i < addBagBtn.length; i++) {
     addBagBtn[i].addEventListener("click", () => {
       console.log("added to cart");
-      saveToStorage("sneaker", 1);
+      itemsAdded(json[i]);
     });
   }
 }
 
-function itemsAdded() {
-  let sneakersAdded = localStorage.getItem("sneaker");
-  console.log(typeof sneakersAdded);
-  localStorage.setItem("sneaker", 1);
+function ProductsinBag() {
+  let sneakersAdded = localStorage.getItem("sneakers");
+
+  if (sneakersAdded) {
+    amountDisplay.textContent = sneakersAdded;
+  }
 }
+
+function itemsAdded(json) {
+  let sneakersAdded = localStorage.getItem("sneakers");
+
+  sneakersAdded = parseInt(sneakersAdded);
+
+  if (sneakersAdded) {
+    localStorage.setItem("sneakers", sneakersAdded + 1);
+    amountDisplay.textContent = sneakersAdded + 1;
+  } else {
+    localStorage.setItem("sneakers", 1);
+    amountDisplay.textContent = 1;
+  }
+  setItems(json);
+}
+
+function setItems(json) {
+  let cartItems = localStorage.getItem("productsInBag");
+  cartItems = JSON.parse(cartItems);
+  console.log("my cartItems are", cartItems);
+  localStorage.setItem("productsInBag", JSON.stringify(json));
+}
+ProductsinBag();
+
+/*function saveToBag(sneakers) {
+  localStorage.setItem("sneakers", JSON.stringify(favorites));
+}*/
 
 // FILTER BY WORK IN PROGRESS
 /*const brandSelection = document.querySelectorAll(".brand-category");

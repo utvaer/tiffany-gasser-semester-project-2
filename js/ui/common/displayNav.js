@@ -45,7 +45,7 @@ export function displayNav() {
                             </li>
 
                             <li class="nav-item">
-                              <a class="nav-link ${
+                              <a class="cart nav-link ${
                                 pathname === "/cart.html" ? "active" : ""
                               }" href="cart.html"
                                 ><i class="ri-shopping-bag-fill"></i
