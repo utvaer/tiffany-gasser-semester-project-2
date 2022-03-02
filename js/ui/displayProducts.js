@@ -18,7 +18,7 @@ export function displayProducts(json) {
                                 <p class="card-text">${json[i].brand}</p>
                               </div>
                               </a>
-                              <button class="btn btn-primary add-bag-btn">Add to Bag</button>
+                              <a class="btn btn-primary add-bag-btn" href="#" role="button">Add to Bag</a>
                               <div class="edit-btn"></div>
                           </div>`;
   }

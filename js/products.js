@@ -1,7 +1,7 @@
 import { displayNav } from "./ui/common/displayNav.js";
 import { baseUrl } from "./settings/api.js";
 import { displayProducts } from "./ui/displayProducts.js";
-import { getToken } from "./utils/storage.js";
+import { clearStorage, getToken, saveToStorage } from "./utils/storage.js";
 import { addAdminAccess } from "./ui/products/addBtn.js";
 import { searchProducts } from "./components/common/searchProducts.js";
 
@@ -16,11 +16,14 @@ displayNav();
   try {
     const response = await fetch(productsUrl);
     const json = await response.json();
-    console.log(json);
+    //console.log(json);
 
     products.innerHTML = "";
     displayProducts(json);
     searchProducts(json);
+    addToBag();
+
+    // ADD TO CART
   } catch (error) {
     console.log(error);
   }
@@ -30,6 +33,32 @@ displayNav();
 const token = getToken();
 if (token) {
   addAdminAccess();
+}
+
+//add to bag
+
+const shoppingBag = [
+  {
+    productId: 1,
+    quantity: 0,
+  },
+];
+
+function addToBag() {
+  let addBagBtn = document.querySelectorAll(".add-bag-btn");
+
+  for (let i = 0; i < addBagBtn.length; i++) {
+    addBagBtn[i].addEventListener("click", () => {
+      console.log("added to cart");
+      saveToStorage("sneaker", 1);
+    });
+  }
+}
+
+function itemsAdded() {
+  let sneakersAdded = localStorage.getItem("sneaker");
+  console.log(typeof sneakersAdded);
+  localStorage.setItem("sneaker", 1);
 }
 
 // FILTER BY WORK IN PROGRESS
@@ -54,3 +83,5 @@ function selectBrand(json) {
     };
   }
 }*/
+
+// Add to bag

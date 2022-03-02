@@ -26,7 +26,7 @@ export function clearStorage() {
   localStorage.clear();
 }
 
-function saveToStorage(key, value) {
+export function saveToStorage(key, value) {
   localStorage.setItem(key, JSON.stringify(value));
 }
 
