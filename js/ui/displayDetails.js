@@ -13,7 +13,8 @@ export function displayDetails(details) {
                           <p>${details.brand}</p>
                           <p>${details.description}</p>
                           <h6 class="card-subtitle mb-2 text-muted">USD ${details.price}</h6>
-                          <button class="btn btn-primary add-bag-btn">Add to Bag</button>
+                          <button class="btn btn-primary add-bag-btn" data-id="${details.id}" data-title="${details.title}"
+                          data-price="${details.price}">Add to Bag</button>
                         </div>
                       </div class="row">`;
 }

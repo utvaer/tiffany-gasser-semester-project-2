@@ -1,6 +1,7 @@
 import { displayNav } from "./ui/common/displayNav.js";
 import { baseUrl } from "./settings/api.js";
 import { displayDetails } from "./ui/displayDetails.js";
+import { addToBag } from "./components/AddToBag.js";
 
 // Display Main Nav
 displayNav();
@@ -21,6 +22,9 @@ if (!id) {
     const details = await response.json();
 
     displayDetails(details);
+
+    const addBagBtn = document.querySelector(".add-bag-btn");
+    addBagBtn.addEventListener("click", addToBag(details));
   } catch (error) {
     console.log(error);
   }
