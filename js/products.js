@@ -21,6 +21,7 @@ displayNav();
     products.innerHTML = "";
     displayProducts(json);
     searchProducts(json);
+    //FilterByBrand(json);
   } catch (error) {
     console.log(error);
   }
@@ -55,4 +56,33 @@ function selectBrand(json) {
   }
 }*/
 
-// Add to bag
+// FIlter by brand
+
+/*const apiURL = new URL("https://urban-foot.herokuapp.com/products");
+let key = "brand";
+let value = getBrand();
+
+apiURL.searchParams.set(key, value);
+displayProducts(apiURL);
+
+console.log(apiURL);
+
+function getBrand() {
+  const brandSelection = document.querySelectorAll("input.brand-category");
+  console.log(brandSelection);
+  brandSelection.addEventListener("click", selectBrand);
+  function selectBrand() {
+    chosenBrand = event.target.value;
+    console.log(event);
+  }
+  //const brandChosen = event.target.id;
+  //console.log(brandChosen);
+}*/
+
+const styleSelection = document.querySelectorAll(".style-category");
+console.log(styleSelection);
+for (let i = 0; i < styleSelection.length; i++) {
+  styleSelection.onclick = function (event) {
+    console.log("hi");
+  };
+}
