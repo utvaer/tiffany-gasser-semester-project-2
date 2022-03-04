@@ -12093,4 +12093,11 @@ h1, .h1 {
   height: auto;
   margin-top: 1em;
 }
+
+.cart-img {
+  height: 150px;
+  width: 150px;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
 /*# sourceMappingURL=styles.css.map */

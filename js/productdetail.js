@@ -24,7 +24,7 @@ if (!id) {
     displayDetails(details);
 
     const addBagBtn = document.querySelector(".add-bag-btn");
-    addBagBtn.addEventListener("click", addToBag(details));
+    addBagBtn.addEventListener("click", addToBag);
   } catch (error) {
     console.log(error);
   }

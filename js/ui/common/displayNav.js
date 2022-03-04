@@ -49,7 +49,7 @@ export function displayNav() {
                                 pathname === "/cart.html" ? "active" : ""
                               }" href="cart.html"
                                 ><i class="ri-shopping-bag-fill"></i
-                              ><span>0</span></a>
+                              ><span></span></a>
                             </li>
 
                             <li class="nav-item">

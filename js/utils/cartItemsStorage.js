@@ -1,17 +1,18 @@
 export function retrieveCartItems() {
-  const added = localStorage.getItem("CartItems");
+  const items = localStorage.getItem("cartItems");
 
-  if (!added) {
+  if (!items) {
     return [];
   } else {
-    return JSON.parse(added);
+    return JSON.parse(items);
   }
 }
 
-export function saveCartItems(cartItems) {
-  localStorage.setItem("cartItems", JSON.stringify(cartItems));
+export function saveCartItems(items) {
+  localStorage.setItem("cartItems", JSON.stringify(items));
 }
 
+//TO DELETE
 /*let amountDisplay = document.querySelector(".cart span");
 const addBagBtn = document.querySelector(".add-bag-btn");
 
