@@ -11955,6 +11955,14 @@ h1, .h1, h2, .h2, h3, .h3 {
   text-align: center;
 }
 
+h1, .h1 {
+  font-size: 2.5em;
+}
+
+h1, .h1, h2, .h2 {
+  margin: 1em 0;
+}
+
 .breadcrumb {
   margin-top: 2em;
 }
@@ -11985,12 +11993,6 @@ body {
 
 h1, .h1, h2, .h2, h3, .h3 {
   font-family: "kyrial-display-pro", sans-serif;
-}
-
-h1, .h1 {
-  text-align: center;
-  font-size: 2.5em;
-  margin: 1em 0;
 }
 
 .navbar > .container-fluid, .navbar > .container-sm, .navbar > .container-md, .navbar > .container-lg, .navbar > .container-xl, .navbar > .container-xxl {
@@ -12094,10 +12096,34 @@ h1, .h1 {
   margin-top: 1em;
 }
 
+.cart-items-container {
+  border-right: 1px solid black;
+  padding: 1em 0.5em;
+}
+
+.cart-items-container i {
+  cursor: pointer;
+  background-color: #dbd0f2;
+  border-radius: 50%;
+  font-size: 1em;
+}
+
 .cart-img {
   height: 150px;
   width: 150px;
   -o-object-fit: cover;
      object-fit: cover;
+}
+
+.cart-products {
+  -webkit-box-align: baseline;
+      -ms-flex-align: baseline;
+          align-items: baseline;
+}
+
+.cart-products hr {
+  border: 1px solid #111;
+  width: 80%;
+  margin: 1em auto;
 }
 /*# sourceMappingURL=styles.css.map */

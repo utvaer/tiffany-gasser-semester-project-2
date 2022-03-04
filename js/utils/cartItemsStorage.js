@@ -12,6 +12,19 @@ export function saveCartItems(items) {
   localStorage.setItem("cartItems", JSON.stringify(items));
 }
 
+/*export function retrieveTotal() {
+  const total = localStorage.getItem("priceTotal");
+
+  if (!total) {
+    return [];
+  } else {
+    return JSON.parse(total);
+  }
+}
+export function saveTotal(total) {
+  localStorage.setItem("priceTotal", JSON.stringify(total));
+}*/
+
 //TO DELETE
 /*let amountDisplay = document.querySelector(".cart span");
 const addBagBtn = document.querySelector(".add-bag-btn");

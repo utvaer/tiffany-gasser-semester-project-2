@@ -1,5 +1,26 @@
+.cart-items-container {
+  border-right: 1px solid black;
+  padding: 1em 0.5em;
+}
+.cart-items-container i {
+  cursor: pointer;
+  background-color: $secondary;
+  border-radius: 50%;
+  font-size: 1em;
+}
+
 .cart-img {
   height: 150px;
   width: 150px;
   object-fit: cover;
+}
+
+.cart-products {
+  align-items: baseline;
+}
+
+.cart-products hr {
+  border: 1px solid #111;
+  width: 80%;
+  margin: 1em auto;
 }

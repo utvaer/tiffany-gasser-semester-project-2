@@ -27,9 +27,10 @@ export function addToBag() {
     for (let i = 0; i < currentItems.length; i++) {
       if (itemAdd.id === itemInBag.id) {
         currentItems[i].qty += 1;
+        //itemInBag.qty
         saveCartItems(currentItems);
       }
     }
   }
-  console.log(typeof id);
+  console.log(typeof price);
 }
