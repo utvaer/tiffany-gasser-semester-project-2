@@ -1,6 +1,7 @@
 import { retrieveCartItems, saveCartItems } from "../utils/cartItemsStorage.js";
 
 export function addToBag() {
+  event.target.innerText = "In Cart";
   const id = this.dataset.id;
   const title = this.dataset.title;
   const price = this.dataset.price;
@@ -26,11 +27,9 @@ export function addToBag() {
   } else {
     for (let i = 0; i < currentItems.length; i++) {
       if (itemAdd.id === itemInBag.id) {
-        currentItems[i].qty += 1;
-        //itemInBag.qty
+        itemInBag.qty += 1;
         saveCartItems(currentItems);
       }
     }
   }
-  console.log(typeof price);
 }

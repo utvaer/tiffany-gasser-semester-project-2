@@ -1,6 +1,6 @@
 .cart-items-container {
   border-right: 1px solid black;
-  padding: 1em 0.5em;
+  padding: 2em;
 }
 .cart-items-container i {
   cursor: pointer;
@@ -10,13 +10,14 @@
 }
 
 .cart-img {
-  height: 150px;
-  width: 150px;
+  height: 100px;
+  width: 100px;
   object-fit: cover;
 }
 
 .cart-products {
   align-items: baseline;
+  text-align: center;
 }
 
 .cart-products hr {

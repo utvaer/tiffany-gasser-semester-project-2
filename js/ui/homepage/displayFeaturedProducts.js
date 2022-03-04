@@ -14,7 +14,7 @@ export function displayFeaturedProducts(products) {
                                 <p class="card-text">${products[i].brand}</p>
                               </div>                              
                             </a>
-                            <button class="btn btn-primary add-bag-btn">Add to Bag</button>
+                            <a href="productpage.html?id=${products[i].id}" class="btn btn-primary details-btn" role="button">More Info</a>
                           </div>`;
   }
 }
