@@ -5,5 +5,6 @@ export function displayHeroImage(image) {
 
   heroImg.innerHTML = `<div>
                           <img src="${imageUrl}" class="hero-img" alt="${imageAlt}">
+                          <a class="btn btn-primary shop" href="products.html" role="button">Shop Now</a>
                         </div>`;
 }

@@ -1,1 +1,31 @@
+.btn {
+  color: #fff;
+}
+.shop {
+  display: block;
+  width: 100%;
+  margin: 1em auto;
+  @media (min-width: 767.98px) {
+    max-width: 20%;
+  }
+}
 
+.search-btn {
+  margin-left: -0.5rem;
+  color: $primary;
+  border-color: $primary;
+}
+
+.product-card .details-btn {
+  color: #fff;
+}
+
+.danger-btn,
+.back-btn {
+  margin: 0 0.2em;
+}
+
+.danger-btn {
+  background-color: #fff;
+  color: $primary;
+}

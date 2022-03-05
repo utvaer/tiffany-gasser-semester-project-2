@@ -11,15 +11,18 @@ h1,
 h2 {
   margin: 1em 0;
 }
+.home-hero h1 {
+  margin: 0;
+}
 .breadcrumb {
   margin-top: 2em;
 }
-
 .footer {
   background-color: $light;
   display: flex;
   justify-content: space-between;
   padding: 1.2em;
+  margin-top: 10%;
 }
 .footer a {
   color: #111;

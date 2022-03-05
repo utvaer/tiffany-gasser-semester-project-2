@@ -7,8 +7,10 @@
 .index-info {
   background-color: $secondary;
   font-size: 1.2em;
-  justify-content: space-evenly;
+  font-weight: bold;
+  justify-content: space-between;
   padding: 2em 0.5em;
   border-radius: 4px;
   margin: 2em 0;
+  text-align: center;
 }

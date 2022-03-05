@@ -11963,6 +11963,10 @@ h1, .h1, h2, .h2 {
   margin: 1em 0;
 }
 
+.home-hero h1, .home-hero .h1 {
+  margin: 0;
+}
+
 .breadcrumb {
   margin-top: 2em;
 }
@@ -11976,6 +11980,7 @@ h1, .h1, h2, .h2 {
       -ms-flex-pack: justify;
           justify-content: space-between;
   padding: 1.2em;
+  margin-top: 10%;
 }
 
 .footer a {
@@ -12029,12 +12034,14 @@ h1, .h1, h2, .h2, h3, .h3 {
 .index-info {
   background-color: #dbd0f2;
   font-size: 1.2em;
-  -webkit-box-pack: space-evenly;
-      -ms-flex-pack: space-evenly;
-          justify-content: space-evenly;
+  font-weight: bold;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
   padding: 2em 0.5em;
   border-radius: 4px;
   margin: 2em 0;
+  text-align: center;
 }
 
 .product-card {
@@ -12065,6 +12072,42 @@ h1, .h1, h2, .h2, h3, .h3 {
   width: 100%;
 }
 
+.btn {
+  color: #fff;
+}
+
+.shop {
+  display: block;
+  width: 100%;
+  margin: 1em auto;
+}
+
+@media (min-width: 767.98px) {
+  .shop {
+    max-width: 20%;
+  }
+}
+
+.search-btn {
+  margin-left: -0.5rem;
+  color: #3730f2;
+  border-color: #3730f2;
+}
+
+.product-card .details-btn {
+  color: #fff;
+}
+
+.danger-btn,
+.back-btn {
+  margin: 0 0.2em;
+}
+
+.danger-btn {
+  background-color: #fff;
+  color: #3730f2;
+}
+
 .product-detail {
   margin: 10% 0;
 }
@@ -12090,8 +12133,13 @@ h1, .h1, h2, .h2, h3, .h3 {
 }
 
 .cart-items-container {
-  border-right: 1px solid black;
   padding: 2em;
+}
+
+@media (min-width: 767.98px) {
+  .cart-items-container {
+    border-right: 1px solid black;
+  }
 }
 
 .cart-items-container i {

@@ -15,6 +15,7 @@ let total = 0;
 
 if (cartItems.length === 0) {
   displayMessage("no items in cart", ".message");
+  clearCart.disabled = true;
 }
 
 // Display Items in Shopping Bag
@@ -76,7 +77,7 @@ costOverview.innerHTML = `<div>
 if (clearCart) {
   clearCart.onclick = function () {
     const RemoveItems = confirm(
-      "Are you sure you want to remove all products?"
+      "Are you sure you want to remove all products from your shopping bag?"
     );
     if (RemoveItems) {
       localStorage.removeItem("cartItems");

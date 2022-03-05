@@ -36,10 +36,7 @@
   </head>
   <body>
     <header>
-      <!--Add to cart-->
-      <div class="overlay"></div>
       <!--Top Nav-->
-      <div class="overlay"></div>
       <nav class="navbar sticky-top navbar-expand-lg navbar-dark bg-dark"></nav>
 
       <!--Search Field-->
@@ -60,25 +57,37 @@
       <!--End of Top Nav-->
     </header>
     <main>
-      <h1>Your Shopping Bag</h1>
-      <div class="row">
-        <div class="col-xs-12 col-sm-8">
-          <h2>Your Items</h2>
-          <div class="message"></div>
-          <div class="cart-items-container"></div>
-          <a class="btn btn-primary shop" href="products.html" role="button"
-            >Continue Shopping</a
-          >
-          <a
-            class="btn btn-primary danger-btn"
-            href="products.html"
-            role="button"
-            >Clear Cart</a
-          >
-        </div>
-        <div class="col-xs-12 col-sm-4">
-          <h2>Order Summary</h2>
-          <div class="cost-overview"></div>
+      <div class="container">
+        <h1>Your Shopping Bag</h1>
+        <!-- Shopping Bag Current Content-->
+        <div class="row">
+          <div class="col-xs-12 col-sm-8">
+            <h2>Your Items</h2>
+            <div class="message"></div>
+            <div class="cart-items-container"></div>
+            <div class="btn-container row">
+              <a
+                class="btn btn-primary back-btn col-sm-4 col-xl-3"
+                href="products.html"
+                role="button"
+                >Continue Shopping</a
+              >
+              <a
+                class="btn btn-primary danger-btn col-sm-4 col-xl-3"
+                href="products.html"
+                role="button"
+                >Clear Cart</a
+              >
+            </div>
+          </div>
+          <!-- End of Shopping Bag Current Content-->
+
+          <!-- Order Overview-->
+          <div class="col-xs-12 col-sm-4">
+            <h2>Order Summary</h2>
+            <div class="cost-overview"></div>
+          </div>
+          <!-- End of Order Overview-->
         </div>
       </div>
     </main>
@@ -88,6 +97,13 @@
       integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p"
       crossorigin="anonymous"
     ></script>
-    <footer></footer>
+    <!--Footer-->
+    <footer>
+      <div class="footer">
+        <p>Copyrights Utv&aelig;r, all rights reserved</p>
+        <a href="/">Terms & Conditions</a>
+        <a href="/">Privacy policy</a>
+      </div>
+    </footer>
   </body>
 </html>

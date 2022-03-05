@@ -18,5 +18,3 @@ export function displayFeaturedProducts(products) {
                           </div>`;
   }
 }
-
-//OBS transfer results to carousel?

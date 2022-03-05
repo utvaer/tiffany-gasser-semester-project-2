@@ -7,7 +7,6 @@ export default function logoutBtn() {
       const doLogout = confirm("Are you sure you want to log out?");
       if (doLogout) {
         clearStorage();
-        //next line can be added in storage file in the function directly, try
         location.href = "/";
       }
     };

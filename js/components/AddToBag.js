@@ -1,7 +1,7 @@
 import { retrieveCartItems, saveCartItems } from "../utils/cartItemsStorage.js";
 
 export function addToBag() {
-  event.target.innerText = "In Cart";
+  event.target.innerText = "In Shopping Bag";
   const id = this.dataset.id;
   const title = this.dataset.title;
   const price = this.dataset.price;

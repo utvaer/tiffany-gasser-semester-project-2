@@ -1,6 +1,8 @@
 .cart-items-container {
-  border-right: 1px solid black;
   padding: 2em;
+  @media (min-width: 767.98px) {
+    border-right: 1px solid black;
+  }
 }
 .cart-items-container i {
   cursor: pointer;
