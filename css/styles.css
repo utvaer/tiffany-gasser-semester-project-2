@@ -12004,9 +12004,6 @@ h1, .h1, h2, .h2, h3, .h3, h4, .h4, h5, .h5 {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
 }
 
 .navbar-brand {
