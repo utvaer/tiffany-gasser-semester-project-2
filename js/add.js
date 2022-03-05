@@ -1,6 +1,7 @@
 import { displayNav } from "./ui/common/displayNav.js";
 import { baseUrl } from "./settings/api.js";
 import { getToken } from "./utils/storage.js";
+import { displayMessage } from "./components/common/displayMessage.js";
 
 // Check is logged in or not
 const token = getToken();
@@ -37,7 +38,7 @@ function submitForm(event) {
     'input[name="exampleRadios"]:checked'
   ).value;
 
-  if (
+  /*if (
     titleValue.length === 0 ||
     brandValue.length === 0 ||
     descriptionValue.length === 0 ||
@@ -47,7 +48,7 @@ function submitForm(event) {
   ) {
     //Change to form validation: return displayMessage();
     console.log("give me somethinnnnnn");
-  }
+  }*/
 
   addProduct(
     titleValue,
@@ -97,15 +98,17 @@ async function addProduct(
   try {
     const response = await fetch(url, options);
     const json = await response.json();
-    //console.log(json);
 
     if (json.created_at) {
-      //Change to display message
       console.log("you did it!");
       productForm.reset();
+      location.href = "/products.html";
     }
   } catch (error) {
-    //Change to display message
     console.log(error);
+    displayMessage(
+      "An error has occurred on our side, we're so sorry!",
+      ".message"
+    );
   }
 }

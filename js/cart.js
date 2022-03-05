@@ -14,8 +14,11 @@ const clearCart = document.querySelector(".danger-btn");
 let total = 0;
 
 if (cartItems.length === 0) {
-  displayMessage("no items in cart", ".message");
-  clearCart.disabled = true;
+  displayMessage(
+    "You currently have no items in your shopping bag.",
+    ".message"
+  );
+  clearCart.style.display = "none";
 }
 
 // Display Items in Shopping Bag

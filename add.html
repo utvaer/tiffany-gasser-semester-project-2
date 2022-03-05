@@ -72,6 +72,8 @@
 
         <h2>Add new product</h2>
 
+        <!--Message Container-->
+        <div class="message"></div>
         <!--Add New Product Form-->
         <form id="new-products-form">
           <!--Product Title-->
@@ -199,13 +201,33 @@
             </label>
           </div>
 
-          <!--Submit Button-->
-          <div class="add-bn"></div>
-          <button type="submit" class="btn btn-primary">Primary</button>
+          <!--Buttons-->
+          <div class="btn-container row">
+            <button
+              type="submit"
+              class="btn btn-primary add-product col-sm-4 col-xl-3"
+            >
+              Add Product
+            </button>
+            <a
+              class="btn btn-primary danger-btn col-sm-4 col-xl-3"
+              href="products.html"
+              role="button"
+              >Cancel</a
+            >
+          </div>
         </form>
       </div>
     </main>
-    <footer></footer>
+
+    <!--Footer-->
+    <footer>
+      <div class="footer">
+        <p>Copyrights Utv&aelig;r, all rights reserved</p>
+        <a href="/">Terms & Conditions</a>
+        <a href="/">Privacy policy</a>
+      </div>
+    </footer>
     <script src="js/add.js" type="module"></script>
     <script
       src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"
