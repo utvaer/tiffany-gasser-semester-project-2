@@ -25,7 +25,17 @@
   margin: 0 0.2em;
 }
 
-.danger-btn {
+.cancel-btn {
   background-color: #fff;
-  color: $primary;
+  color: #111;
+  border: 1px solid #111;
+  &:hover {
+    border: 1px solid $secondary;
+  }
+}
+
+.details-btn,
+.edit-btn {
+  width: 100%;
+  margin-bottom: 0.2em;
 }

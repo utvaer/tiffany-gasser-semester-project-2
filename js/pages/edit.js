@@ -1,7 +1,7 @@
 import { displayNav } from "../ui/common/displayNav.js";
 import { baseUrl } from "../settings/api.js";
 import { getToken } from "../utils/storage.js";
-import { deleteButton } from "./ui/products/deleteButton.js";
+import { deleteButton } from "../ui/products/admin/deleteButton.js";
 import { displayMessage } from "../components/common/displayMessage.js";
 
 const token = getToken();

@@ -1,5 +1,6 @@
 export function displayFeaturedProducts(products) {
   const featuredContainer = document.querySelector(".row");
+  featuredContainer.innerHTML = "";
 
   for (let i = 0; i < products.length; i++) {
     if (!products[i].featured) {

@@ -19,10 +19,10 @@ export function displayProducts(json) {
                               </div>
                               </a>
                               <a href="productpage.html?id=${productId}" class="btn btn-primary details-btn" role="button">More Info</a>
-                              <div class="edit-btn"></div>
+                              <div class="edit"></div>
                           </div>`;
   }
-  const editBtn = document.querySelectorAll(".edit-btn");
+  const editBtn = document.querySelectorAll(".edit");
   addEditBtn(editBtn, json);
   console.log(editBtn);
 }
