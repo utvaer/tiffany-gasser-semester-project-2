@@ -4,6 +4,10 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="Restricted access page to edit existing products to urban Feet"
+    />
     <!--Fonts import-->
     <link rel="stylesheet" href="https://use.typekit.net/rnq5edb.css" />
     <!-- Icons-->
@@ -32,7 +36,7 @@
     <link rel="manifest" href="/site.webmanifest" />
     <!-- CSS Stylesheet-->
     <link rel="stylesheet" href="css/styles.css" />
-    <title>Document</title>
+    <title></title>
   </head>
   <body>
     <header>
@@ -172,18 +176,22 @@
         <input id="id" type="hidden" />
 
         <!--Buttons-->
-        <div class="edit">
-          <button type="submit" class="btn btn-primary edit-btn-indv">
-            Edit Product
-          </button>
+        <div class="row">
+          <div class="edit col-sm-4 col-md-3 col-lg-2">
+            <button type="submit" class="btn btn-primary edit-btn">
+              Edit Product
+            </button>
+          </div>
+          <div class="col-sm-4 col-md-3 col-lg-2">
+            <a
+              class="btn btn-secondary cancel-btn"
+              href="products.html"
+              role="button"
+              >Cancel</a
+            >
+          </div>
+          <div class="delete-btn-container col-sm-4 col-md-3 col-lg-2"></div>
         </div>
-        <a
-          class="btn btn-secondary cancel-btn"
-          href="products.html"
-          role="button"
-          >Cancel</a
-        >
-        <div class="delete-btn-container"></div>
       </form>
     </main>
     <!--Footer-->

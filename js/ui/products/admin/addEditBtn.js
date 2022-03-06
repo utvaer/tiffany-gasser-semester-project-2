@@ -1,7 +1,6 @@
 import { getToken } from "../../../utils/storage.js";
 
 export function addEditBtn(editBtn, json) {
-  console.log(json);
   const token = getToken();
   if (token) {
     for (let i = 0; i < editBtn.length; i++) {

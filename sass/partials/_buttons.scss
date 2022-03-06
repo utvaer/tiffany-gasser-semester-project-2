@@ -33,9 +33,19 @@
     border: 1px solid $secondary;
   }
 }
+.danger-btn,
+.cancel-btn {
+  color: #111;
+  &:hover {
+    background-color: #111;
+    color: $light;
+  }
+}
 
 .details-btn,
-.edit-btn {
+.edit-btn,
+.cancel-btn,
+.delete-btn {
   width: 100%;
-  margin-bottom: 0.2em;
+  margin: 0.5em 0 0.2em 0;
 }

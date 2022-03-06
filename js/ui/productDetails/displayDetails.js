@@ -18,5 +18,5 @@ export function displayDetails(details) {
                           data-price="${details.price}"
                           data-img="${image}">Add to Bag</button>
                         </div>
-                      </div class="row">`;
+                      </div>`;
 }

@@ -39,6 +39,9 @@ const editBtn = document.querySelector(".edit");
     const response = await fetch(url);
     const details = await response.json();
 
+    //Display page title
+    document.title = `Urban Feet | Edit ${details.title}`;
+
     //Display Product to Edit
     title.value = details.title;
     brand.value = details.brand;

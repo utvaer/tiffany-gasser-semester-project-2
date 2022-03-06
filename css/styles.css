@@ -12110,10 +12110,23 @@ h1, .h1, h2, .h2, h3, .h3, h4, .h4, h5, .h5 {
   border: 1px solid #dbd0f2;
 }
 
+.danger-btn,
+.cancel-btn {
+  color: #111;
+}
+
+.danger-btn:hover,
+.cancel-btn:hover {
+  background-color: #111;
+  color: #e5f280;
+}
+
 .details-btn,
-.edit-btn {
+.edit-btn,
+.cancel-btn,
+.delete-btn {
   width: 100%;
-  margin-bottom: 0.2em;
+  margin: 0.5em 0 0.2em 0;
 }
 
 .product-detail {

@@ -24,5 +24,4 @@ export function displayProducts(json) {
   }
   const editBtn = document.querySelectorAll(".edit");
   addEditBtn(editBtn, json);
-  console.log(editBtn);
 }
