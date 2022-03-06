@@ -1,4 +1,7 @@
-import { retrieveCartItems, saveCartItems } from "../utils/cartItemsStorage.js";
+import {
+  retrieveCartItems,
+  saveCartItems,
+} from "../../utils/cartItemsStorage.js";
 
 export function addToBag() {
   event.target.innerText = "In Shopping Bag";

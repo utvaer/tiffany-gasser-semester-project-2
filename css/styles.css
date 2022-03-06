@@ -12130,7 +12130,7 @@ h1, .h1, h2, .h2, h3, .h3, h4, .h4, h5, .h5 {
 }
 
 .cart-items-container {
-  padding: 2em;
+  padding: 2em 1em;
 }
 
 @media (min-width: 767.98px) {
@@ -12154,9 +12154,6 @@ h1, .h1, h2, .h2, h3, .h3, h4, .h4, h5, .h5 {
 }
 
 .cart-products {
-  -webkit-box-align: baseline;
-      -ms-flex-align: baseline;
-          align-items: baseline;
   text-align: center;
 }
 
@@ -12164,5 +12161,9 @@ h1, .h1, h2, .h2, h3, .h3, h4, .h4, h5, .h5 {
   border: 1px solid #111;
   width: 80%;
   margin: 1em auto;
+}
+
+.cost-overview {
+  padding: 2em 0.5em;
 }
 /*# sourceMappingURL=styles.css.map */

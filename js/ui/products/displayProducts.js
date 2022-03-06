@@ -1,4 +1,4 @@
-import { addEditBtn } from "./products/addEditBtn.js";
+import { addEditBtn } from "./admin/addEditBtn.js";
 
 export function displayProducts(json) {
   const products = document.querySelector(".row");

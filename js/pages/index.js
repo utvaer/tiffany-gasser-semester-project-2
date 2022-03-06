@@ -1,7 +1,7 @@
-import { displayNav } from "./ui/common/displayNav.js";
-import { baseUrl } from "./settings/api.js";
-import { displayHeroImage } from "./ui/homepage/displayHeroImage.js";
-import { displayFeaturedProducts } from "./ui/homepage/displayFeaturedProducts.js";
+import { displayNav } from "../ui/common/displayNav.js";
+import { baseUrl } from "../settings/api.js";
+import { displayHeroImage } from "../ui/homepage/displayHeroImage.js";
+import { displayFeaturedProducts } from "../ui/homepage/displayFeaturedProducts.js";
 const imageUrl = baseUrl + "home";
 const featuredUrl = baseUrl + "products";
 

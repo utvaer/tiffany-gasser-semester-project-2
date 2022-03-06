@@ -1,7 +1,7 @@
-import { displayNav } from "./ui/common/displayNav.js";
-import { baseUrl } from "./settings/api.js";
-import { getToken } from "./utils/storage.js";
-import { displayMessage } from "./components/common/displayMessage.js";
+import { displayNav } from "../ui/common/displayNav.js";
+import { baseUrl } from "../settings/api.js";
+import { getToken } from "../utils/storage.js";
+import { displayMessage } from "../components/common/displayMessage.js";
 
 // Check is logged in or not
 const token = getToken();

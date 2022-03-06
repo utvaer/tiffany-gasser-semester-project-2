@@ -1,6 +1,6 @@
-import { displayNav } from "./ui/common/displayNav.js";
-import { retrieveCartItems } from "./utils/cartItemsStorage.js";
-import { displayMessage } from "./components/common/displayMessage.js";
+import { displayNav } from "../ui/common/displayNav.js";
+import { retrieveCartItems } from "../utils/cartItemsStorage.js";
+import { displayMessage } from "../components/common/displayMessage.js";
 
 // Display Main Nav
 displayNav();
@@ -28,35 +28,26 @@ cartItems.forEach((item) => {
   total += productTotal;
   console.log(item.price);
   cartItemsContainer.innerHTML += `<div class="row cart-products">
-                                    <div class="col-sm-1">
-                                        <i class="ri-close-line remove-item" data-id"${
-                                          item.id
-                                        }"></i>
+                                    <div class="col-sm-2">
+                                      <a href="productpage.html?id=${
+                                        item.id
+                                      }"> <..product details</a>
                                     </div>
                                     <div class="col-sm-3">
                                       <img src="${
                                         item.image
                                       }" class="rounded cart-img"></img>
                                     </div>
-                                    <div class="col-sm-4">
+                                    <div class="col-sm-3">
                                       <h5>${item.title}</h5>
                                       <h6 class="card-subtitle mb-2 text-muted">$${
                                         item.price
                                       },00</h6>
-                                      <a href="productpage.html?id=${
-                                        item.id
-                                      }"> <..product details</a>
                                     </div>
                                     <div class="col-sm-2">
                                         <div class="quantity">
                                           <h6>Amount:</h6>
-                                          <i class="ri-arrow-left-s-line" data-id"${
-                                            item.id
-                                          }"></i>
-                                          <span>${item.qty}</span>
-                                          <i class="ri-arrow-right-s-line" data-id"${
-                                            item.id
-                                          }"></i>
+                                          <span>X ${item.qty}</span>
                                         </div>
                                     </div>
                                     <div class="col-sm-2">

@@ -38,23 +38,6 @@
     <header>
       <!--Top Nav-->
       <nav class="navbar sticky-top navbar-expand-lg navbar-dark bg-dark"></nav>
-
-      <!--Search Field-->
-      <div class="search-field">
-        <form class="d-flex">
-          <input
-            id="search-input"
-            class="form-control me-2"
-            type="search"
-            placeholder="Search sneakers, brands.."
-            aria-label="Search"
-          />
-          <button class="btn btn-outline-success search-btn" type="submit">
-            <i class="ri-search-line"></i>
-          </button>
-        </form>
-      </div>
-      <!--End of Top Nav-->
     </header>
     <main>
       <div class="container">
@@ -65,9 +48,9 @@
             <h2>Your Items</h2>
             <div class="message"></div>
             <div class="cart-items-container"></div>
-            <div class="btn-container row">
+            <div class="btns-container row">
               <a
-                class="btn btn-primary back-btn col-sm-4 col-xl-3"
+                class="btn btn-primary back-btn col-xs-10 col-sm-4 col-xl-3"
                 href="products.html"
                 role="button"
                 >Continue Shopping</a
@@ -91,12 +74,6 @@
         </div>
       </div>
     </main>
-    <script src="js/cart.js" type="module"></script>
-    <script
-      src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"
-      integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p"
-      crossorigin="anonymous"
-    ></script>
     <!--Footer-->
     <footer>
       <div class="footer">
@@ -105,5 +82,11 @@
         <a href="/">Privacy policy</a>
       </div>
     </footer>
+    <script src="js/pages/cart.js" type="module"></script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p"
+      crossorigin="anonymous"
+    ></script>
   </body>
 </html>

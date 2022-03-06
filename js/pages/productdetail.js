@@ -1,7 +1,7 @@
-import { displayNav } from "./ui/common/displayNav.js";
-import { baseUrl } from "./settings/api.js";
-import { displayDetails } from "./ui/displayDetails.js";
-import { addToBag } from "./components/AddToBag.js";
+import { displayNav } from "../ui/common/displayNav.js";
+import { baseUrl } from "../settings/api.js";
+import { displayDetails } from "../ui/productDetails/displayDetails.js";
+import { addToBag } from "../components/productDetails/AddToBag.js";
 
 // Display Main Nav
 displayNav();

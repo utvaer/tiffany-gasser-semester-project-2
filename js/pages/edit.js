@@ -1,7 +1,8 @@
-import { displayNav } from "./ui/common/displayNav.js";
-import { baseUrl } from "./settings/api.js";
-import { getToken } from "./utils/storage.js";
+import { displayNav } from "../ui/common/displayNav.js";
+import { baseUrl } from "../settings/api.js";
+import { getToken } from "../utils/storage.js";
 import { deleteButton } from "./ui/products/deleteButton.js";
+import { displayMessage } from "../components/common/displayMessage.js";
 
 const token = getToken();
 if (!token) {
@@ -49,7 +50,7 @@ const editBtn = document.querySelector(".edit");
     //IMG display not working
     image.file = details.image.url;
     imageAlt.value = details.image_alt;
-    //STyle selection not working
+    //Style selection not working
     style.checked = details.style;
 
     //Display Delete Button
@@ -82,7 +83,7 @@ function submitForm(event) {
     'input[name="exampleRadios"]:checked'
   ).value;
 
-  if (
+  /*if (
     titleValue.length === 0 ||
     brandValue.length === 0 ||
     descriptionValue.length === 0 ||
@@ -92,7 +93,7 @@ function submitForm(event) {
   ) {
     //Change to form validation: return displayMessage();
     console.log("give me somethinnnnnn");
-  }
+  }*/
 
   updateProduct(
     titleValue,
@@ -153,8 +154,11 @@ async function updateProduct(
     }
 
     if (json.error) {
-      //Change to displayMessage();
-      console.log("Fail");
+      console.log(error);
+      displayMessage(
+        "An error has occurred on our part, please try again later.",
+        ".message"
+      );
     }
   } catch (error) {
     console.log(error);

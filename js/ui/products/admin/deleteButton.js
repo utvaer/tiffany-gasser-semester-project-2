@@ -1,5 +1,5 @@
-import { baseUrl } from "../../settings/api.js";
-import { getToken } from "../../utils/storage.js";
+import { baseUrl } from "../../../settings/api.js";
+import { getToken } from "../../../utils/storage.js";
 
 export function deleteButton(id) {
   const btnContainer = document.querySelector(".delete-btn-container");
