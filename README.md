@@ -1,5 +1,56 @@
-# Semester project Noroff
-## Second year project as a frontend development student at Noroff.
+# Urban Feet
 
-<p>This project was created with a Strapi backend and pure vanilla js, html and css.</p>
-<p>Is is a fictitious sneakers e-shop. </p>
+<img width="1270" alt="Screenshot 2022-11-29 at 21 24 21" src="https://user-images.githubusercontent.com/63408115/206701565-a9dba7c1-d6a0-42af-ba95-ac28ad0940af.png">
+
+## Description
+This is a semester project I did during my second year of frontend development at Noroff. Fictious sneakers e-shop in order to work with
+
+- API calls 
+- login functionality
+- Data storage
+
+## Built With
+
+- Vanilla Js
+- [Strapi](https://strapi.io/)
+- [Bootstrap](https://getbootstrap.com)
+- [Sass](https://sass-lang.com/)
+
+## Getting Started
+
+### Installing
+
+
+1. Clone the repo:
+
+```bash
+git clone https://github.com/utvaer/tiffany-gasser-semester-project-2.git
+```
+
+2. Install the dependencies:
+
+```
+npm install
+```
+
+### Running
+
+To run the app, run the following commands:
+
+```bash
+npm run start
+```
+
+## Contact
+
+This is where you can leave your social links for people to contact you, such as a LinkedIn profile or Twitter link e.g.
+
+[My LinkedIn page](https://www.linkedin.com/in/tiffany-utv%C3%A6r-gasser-023336115/)
+
+## License
+
+You can link to your license file here if you're using one, or mention what license the codebase falls under. If you're unsure then you can simply delete this section.
+
+## Acknowledgments
+
+I want to thank the tutors at Noroff, as well as fellow students, especially [Priscila](https://github.com/pkderlam87) and [Monika](https://github.com/lunadragon06) for your support, advice and friendship.
