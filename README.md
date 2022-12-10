@@ -1,6 +1,6 @@
 # Urban Feet
 
-<img width="1270" alt="Screenshot of project src="https://user-images.githubusercontent.com/63408115/206701565-a9dba7c1-d6a0-42af-ba95-ac28ad0940af.png">
+<img width="1270" alt="Screenshot of project" src="https://user-images.githubusercontent.com/63408115/206701565-a9dba7c1-d6a0-42af-ba95-ac28ad0940af.png">
 
 ## Description
 This is a semester project I did during my second year of frontend development at Noroff. Fictious sneakers e-shop in order to work with:
