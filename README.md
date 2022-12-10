@@ -1,9 +1,9 @@
 # Urban Feet
 
-<img width="1270" alt="Screenshot 2022-11-29 at 21 24 21" src="https://user-images.githubusercontent.com/63408115/206701565-a9dba7c1-d6a0-42af-ba95-ac28ad0940af.png">
+<img width="1270" alt="Screenshot of project src="https://user-images.githubusercontent.com/63408115/206701565-a9dba7c1-d6a0-42af-ba95-ac28ad0940af.png">
 
 ## Description
-This is a semester project I did during my second year of frontend development at Noroff. Fictious sneakers e-shop in order to work with
+This is a semester project I did during my second year of frontend development at Noroff. Fictious sneakers e-shop in order to work with:
 
 - API calls 
 - login functionality
@@ -12,6 +12,7 @@ This is a semester project I did during my second year of frontend development a
 ## Built With
 
 - Vanilla Js
+- Query strings
 - [Strapi](https://strapi.io/)
 - [Bootstrap](https://getbootstrap.com)
 - [Sass](https://sass-lang.com/)
@@ -43,7 +44,7 @@ npm run start
 
 ## Contact
 
-This is where you can leave your social links for people to contact you, such as a LinkedIn profile or Twitter link e.g.
+If you'd like to connect, you can contact me here:
 
 [My LinkedIn page](https://www.linkedin.com/in/tiffany-utv%C3%A6r-gasser-023336115/)
 
