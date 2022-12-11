@@ -41,16 +41,14 @@ To run the app, run the following commands:
 ```bash
 npm run start
 ```
+If you are interested in this work, let's get in touch!
+
 
 ## Contact
 
 If you'd like to connect, you can contact me here:
 
 [My LinkedIn page](https://www.linkedin.com/in/tiffany-utv%C3%A6r-gasser-023336115/)
-
-## License
-
-You can link to your license file here if you're using one, or mention what license the codebase falls under. If you're unsure then you can simply delete this section.
 
 ## Acknowledgments
 
